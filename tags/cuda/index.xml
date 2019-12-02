@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Cuda | byung.org</title>
+    <link>/tags/cuda/</link>
+      <atom:link href="/tags/cuda/index.xml" rel="self" type="application/rss+xml" />
+    <description>Cuda</description>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>some copyrights; (2015)</copyright><lastBuildDate>Mon, 27 Apr 2015 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>/img/icon-192.png</url>
+      <title>Cuda</title>
+      <link>/tags/cuda/</link>
+    </image>
+    
+    <item>
+      <title>Realtime Fractal Zooming with CUDA</title>
+      <link>/project/mandelbrotcuda/</link>
+      <pubDate>Mon, 27 Apr 2015 00:00:00 +0000</pubDate>
+      <guid>/project/mandelbrotcuda/</guid>
+      <description>&lt;h2 id=&#34;1-visualizing-mandelbrot-set-in-realtime&#34;&gt;1. Visualizing Mandelbrot set in realtime&lt;/h2&gt;
+&lt;p&gt;Mandelbrot set can be visualized using OpenGL and cuda together as above. If this is rendered using CPU&lt;sup id=&#34;fnref:1&#34;&gt;&lt;a href=&#34;#fn:1&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;1&lt;/a&gt;&lt;/sup&gt;, its FPS is as below:&lt;/p&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure&gt;
+
+
+  &lt;a data-fancybox=&#34;&#34; href=&#34;figure1.jpg&#34; data-caption=&#34;CPU usage&#34;&gt;
+&lt;img src=&#34;figure1.jpg&#34; alt=&#34;&#34; &gt;&lt;/a&gt;
+
+
+  
+  
+  &lt;figcaption&gt;
+    CPU usage
+  &lt;/figcaption&gt;
+
+
+&lt;/figure&gt;
+
+&lt;p&gt;There is no parallelization with the base CPU model. Procedural double loop and heavy calculation is very slow that causes the rendering to become uninteractive. This is, however, very a good subject for the GPU parallel computation. Because, it has a small amount of branchings and rare memory access. Each pixel will have independency for computation in lots of cases.&lt;/p&gt;
+&lt;h2 id=&#34;2-using-gpu-for-realtime-visualization&#34;&gt;2. Using GPU for realtime visualization&lt;/h2&gt;
+&lt;p&gt;Converting double loop to a single loop is simple in case of rendering mandelbrot set, since PBO has a linear memory space. Similar to parallel histogram computation, the distrbution of computation can be easily done with GPU model.&lt;/p&gt;
+&lt;p&gt;Using proper amount of threads boosts the speed as following:&lt;/p&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure&gt;
+
+
+  &lt;a data-fancybox=&#34;&#34; href=&#34;figure2.jpg&#34; data-caption=&#34;GPU usage&#34;&gt;
+&lt;img src=&#34;figure2.jpg&#34; alt=&#34;&#34; &gt;&lt;/a&gt;
+
+
+  
+  
+  &lt;figcaption&gt;
+    GPU usage
+  &lt;/figcaption&gt;
+
+
+&lt;/figure&gt;
+
+&lt;p&gt;The left shows a kernel with 49x1024 threads, which boosts about 333 times compared to the base model. With proper thread-block dimension, 15% more improvement can be acheived.&lt;/p&gt;
+&lt;h2 id=&#34;3-nstream-rendering&#34;&gt;3. n-stream rendering&lt;/h2&gt;
+&lt;p&gt;The above kernel in section 2 renders about 42 pixels per thread &lt;sup id=&#34;fnref:2&#34;&gt;&lt;a href=&#34;#fn:2&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;2&lt;/a&gt;&lt;/sup&gt;, where each thread&#39;s memory access will be about 168 bytes apart with no global memory access. Even for writing, it is better to coalesce the memory access for a better cache use. Instead of reindexing the writing process, changing the calculation level to per-pixel base can help for speeding up the calculation with a parallelization. Using 42 streams with 376x128 threads can speed up even more as below:&lt;/p&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure&gt;
+
+
+  &lt;a data-fancybox=&#34;&#34; href=&#34;figure3.jpg&#34; data-caption=&#34;GPU speedup with streams&#34;&gt;
+&lt;img src=&#34;figure3.jpg&#34; alt=&#34;&#34; &gt;&lt;/a&gt;
+
+
+  
+  
+  &lt;figcaption&gt;
+    GPU speedup with streams
+  &lt;/figcaption&gt;
+
+
+&lt;/figure&gt;
+
+&lt;p&gt;This is about 650 times faster than the base CPU model. The use of shared memory could not speed up the process since the GPU model didn&#39;t depend on previously calculated values. The realtime visualization of Mandelbrot set was a problem for how to distribute the computation than how to optimize the kernel.&lt;/p&gt;
+&lt;h2 id=&#34;4-realtime-visualization&#34;&gt;4. Realtime Visualization&lt;/h2&gt;
+&lt;p&gt;The GPU model can be visualized in realtime as below:
+
+&lt;div style=&#34;position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;&#34;&gt;
+  &lt;iframe src=&#34;https://www.youtube.com/embed/rqsVY-9iMKo&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;&#34; allowfullscreen title=&#34;YouTube Video&#34;&gt;&lt;/iframe&gt;
+&lt;/div&gt;
+&lt;/p&gt;
+&lt;h2 id=&#34;acknowledgement&#34;&gt;Acknowledgement&lt;/h2&gt;
+&lt;p&gt;This project was advised by Prof. &lt;a href=&#34;https://www3.cs.stonybrook.edu/~mueller/&#34;&gt;Klaus Mueller&lt;/a&gt;.&lt;/p&gt;
+&lt;h2 id=&#34;footnotes&#34;&gt;Footnotes&lt;/h2&gt;
+&lt;section class=&#34;footnotes&#34; role=&#34;doc-endnotes&#34;&gt;
+&lt;hr&gt;
+&lt;ol&gt;
+&lt;li id=&#34;fn:1&#34; role=&#34;doc-endnote&#34;&gt;
+&lt;p&gt;using AMD 8300 in 2015&lt;/p&gt;
+&lt;/li&gt;
+&lt;li id=&#34;fn:2&#34; role=&#34;doc-endnote&#34;&gt;
+&lt;p&gt;using Nvidia 780 gtx&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/section&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Etc</title>
+      <link>/project/etc/</link>
+      <pubDate>Tue, 27 Jan 1981 00:00:00 +0000</pubDate>
+      <guid>/project/etc/</guid>
+      <description>&lt;h3 id=&#34;2006-finger-touch-tracking-adjustable-game-probability&#34;&gt;2006 Finger Touch Tracking, Adjustable Game Probability&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;Worked on a project for finger tracking with Bezier Forward Difference&lt;/li&gt;
+&lt;li&gt;Worked on adjustable game probability in Impression Co.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3 id=&#34;2004-physics-and-3d-graphics-engine-in-dx11&#34;&gt;2004 Physics and 3D Graphics Engine in DX11&lt;/h3&gt;
+&lt;p&gt;I&#39;ve worked on 3D Graphics/Physics Engine in Laon Soft&lt;/p&gt;
+&lt;h3 id=&#34;2002-scene-graph-library-maya-plugin&#34;&gt;2002 Scene Graph Library, Maya Plugin&lt;/h3&gt;
+&lt;p&gt;I&#39;ve worked on building scene graph library and related Maya Plugins in Cenozoic Co.&lt;/p&gt;
+&lt;h3 id=&#34;2001-motion-capture-reprocessing&#34;&gt;2001 Motion Capture Reprocessing&lt;/h3&gt;
+&lt;p&gt;I&#39;ve worked on motion captured data reprocessing in Cenozoic Co.&lt;/p&gt;
+&lt;h3 id=&#34;1998-text-mud&#34;&gt;1998 Text MUD&lt;/h3&gt;
+&lt;p&gt;Worked on Text MUD game for personal enjoyment&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

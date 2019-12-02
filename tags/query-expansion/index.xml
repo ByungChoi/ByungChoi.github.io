@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Query Expansion | byung.org</title>
+    <link>/tags/query-expansion/</link>
+      <atom:link href="/tags/query-expansion/index.xml" rel="self" type="application/rss+xml" />
+    <description>Query Expansion</description>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>some copyrights; (2015)</copyright><lastBuildDate>Wed, 15 Nov 2017 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>/img/icon-192.png</url>
+      <title>Query Expansion</title>
+      <link>/tags/query-expansion/</link>
+    </image>
+    
+    <item>
+      <title>Generative Query Expansion</title>
+      <link>/project/gqe-timan/</link>
+      <pubDate>Wed, 15 Nov 2017 00:00:00 +0000</pubDate>
+      <guid>/project/gqe-timan/</guid>
+      <description>&lt;h2 id=&#34;introduction&#34;&gt;Introduction&lt;/h2&gt;
+&lt;p&gt;In many query expansion studies, the primary evaluation depends on its search result. This project tries to provide a second way of measuring QE performance by measuring how many query expansion terms overlaps with ideal expansion terms, where ideal expansion terms are trained from a high performing QE from supervised learning.&lt;/p&gt;
+&lt;h2 id=&#34;currently&#34;&gt;Currently&lt;/h2&gt;
+&lt;p&gt;Updating this page.&lt;/p&gt;
+&lt;h2 id=&#34;acknowledgement&#34;&gt;Acknowledgement&lt;/h2&gt;
+&lt;p&gt;This project is advised by Prof. &lt;a href=&#34;http://czhai.cs.illinois.edu&#34;&gt;Cheng Xiang Zhai&lt;/a&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

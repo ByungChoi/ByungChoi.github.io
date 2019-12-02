@@ -1,0 +1,340 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Projects | byung.org</title>
+    <link>/project/</link>
+      <atom:link href="/project/index.xml" rel="self" type="application/rss+xml" />
+    <description>Projects</description>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>some copyrights; (2015)</copyright><lastBuildDate>Sun, 17 Nov 2019 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>/img/icon-192.png</url>
+      <title>Projects</title>
+      <link>/project/</link>
+    </image>
+    
+    <item>
+      <title>Terrain Generation with GAN</title>
+      <link>/project/terrain-gan/</link>
+      <pubDate>Sun, 17 Nov 2019 00:00:00 +0000</pubDate>
+      <guid>/project/terrain-gan/</guid>
+      <description>&lt;h2 id=&#34;introduction&#34;&gt;Introduction&lt;/h2&gt;
+&lt;p&gt;As terrain generation would require a resolution that is higher than 100, DCGAN may not be a good fit for the purpose. This project has adapted Progressive Growing GAN for stable training and generations in a higher resolution.&lt;/p&gt;
+&lt;h2 id=&#34;progressive-growing-gan&#34;&gt;Progressive Growing GAN&lt;/h2&gt;
+&lt;p&gt;Progressive Growing GAN uses He initialization, pixelwise normalization, minibatch standard deviation, equalized learning rate for convolutions, exponential running average, and blending layers with different resolutions. This fading technique helps the network to get stablized. The MNIST dataset was used in early stage to make sure that the network works well as shown in Misc section.&lt;/p&gt;
+&lt;h2 id=&#34;training&#34;&gt;Training&lt;/h2&gt;
+&lt;p&gt;The neural network was trained on the topology data and surface color from NASA&#39;s &lt;a href=&#34;https://visibleearth.nasa.gov&#34;&gt;Visible Earth&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;The training process combines the colors of the earth&#39;s surface and it&#39;s topology, which enables the network to generate both colors and heights of a terrain like below:&lt;/p&gt;
+&lt;p&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure&gt;
+
+
+  &lt;a data-fancybox=&#34;&#34; href=&#34;featured.jpg&#34; data-caption=&#34;generated terrain colors&#34;&gt;
+&lt;img src=&#34;featured.jpg&#34; alt=&#34;&#34; &gt;&lt;/a&gt;
+
+
+  
+  
+  &lt;figcaption&gt;
+    generated terrain colors
+  &lt;/figcaption&gt;
+
+
+&lt;/figure&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure&gt;
+
+
+  &lt;a data-fancybox=&#34;&#34; href=&#34;topo_example.jpg&#34; data-caption=&#34;generated heights&#34;&gt;
+&lt;img src=&#34;topo_example.jpg&#34; alt=&#34;&#34; &gt;&lt;/a&gt;
+
+
+  
+  
+  &lt;figcaption&gt;
+    generated heights
+  &lt;/figcaption&gt;
+
+
+&lt;/figure&gt;
+&lt;/p&gt;
+&lt;p&gt;These generated samples can be visualized in 3D.&lt;/p&gt;
+&lt;h3 id=&#34;31-terrain-visualization-in-3d&#34;&gt;3.1 Terrain Visualization in 3D&lt;/h3&gt;
+&lt;p&gt;The below video shows how the generated terrains can be visualized in 3D.&lt;/p&gt;
+
+&lt;div style=&#34;position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;&#34;&gt;
+  &lt;iframe src=&#34;https://www.youtube.com/embed/WM52rjuR6Pw&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;&#34; allowfullscreen title=&#34;YouTube Video&#34;&gt;&lt;/iframe&gt;
+&lt;/div&gt;
+
+&lt;p&gt;The generations from fixed random latent vectors were tracked, and their training progress in 3D representations were captured as below:&lt;/p&gt;
+&lt;h3 id=&#34;32-training-visualization-in-3d&#34;&gt;3.2 Training Visualization in 3D&lt;/h3&gt;
+&lt;p&gt;We can see how the GAN is combining various features in the visualization, which we cannot see in the visualization of 2D.&lt;/p&gt;
+
+&lt;div style=&#34;position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;&#34;&gt;
+  &lt;iframe src=&#34;https://www.youtube.com/embed/rCjdObI5iFU&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;&#34; allowfullscreen title=&#34;YouTube Video&#34;&gt;&lt;/iframe&gt;
+&lt;/div&gt;
+
+&lt;h3 id=&#34;32-training-visualization-in-2d&#34;&gt;3.2 Training Visualization in 2D&lt;/h3&gt;
+&lt;p&gt;The left half is how surface colors are generated and the right half shows the corresponding heights.&lt;/p&gt;
+
+&lt;div style=&#34;position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;&#34;&gt;
+  &lt;iframe src=&#34;https://www.youtube.com/embed/0B4VAgV4Eyc&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;&#34; allowfullscreen title=&#34;YouTube Video&#34;&gt;&lt;/iframe&gt;
+&lt;/div&gt;
+
+&lt;h2 id=&#34;acknowledgement&#34;&gt;Acknowledgement&lt;/h2&gt;
+&lt;p&gt;This research project was advised by Prof. &lt;a href=&#34;https://cs.illinois.edu/directory/profile/shaffer1&#34;&gt;Eric Shaffer&lt;/a&gt;.&lt;/p&gt;
+&lt;h2 id=&#34;misc&#34;&gt;Misc.&lt;/h2&gt;
+&lt;p&gt;MNIST digits generation using Progressive Growing GAN&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Chess AI using AlphaZero (2020)</title>
+      <link>/project/chessalphazero/</link>
+      <pubDate>Fri, 01 Feb 2019 00:00:00 +0000</pubDate>
+      <guid>/project/chessalphazero/</guid>
+      <description>&lt;p&gt;The project is in very early stage.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Deep Q-Learning for Atari Games</title>
+      <link>/project/dql-atari/</link>
+      <pubDate>Tue, 01 Jan 2019 00:00:00 +0000</pubDate>
+      <guid>/project/dql-atari/</guid>
+      <description>&lt;h2 id=&#34;introduction&#34;&gt;Introduction&lt;/h2&gt;
+&lt;p&gt;The reinforcement learning has been around for more than a decade [2] , and Q-learning is one of most famous method for RL. DeepMind has especially utilized Q-learning, and evolved the idea to the next level by adapting non-linear model. Instead of Q table, Neural network is now used to predict the values, which is called Deep Q Network. The CNN and Deep Q-learning is what DeepMind’s work is all about.&lt;/p&gt;
+&lt;h2 id=&#34;problem&#34;&gt;Problem&lt;/h2&gt;
+&lt;p&gt;DQN has to observe a game from ATARI and be trained to beat human level performance. Since Space Invader was the main example of early Deep-Mind’s paper, we are going to chose the game for this project. We are going to train our model to achieve the score of 500, which is the result of &amp;ldquo;Playing atari with deep reinforcement learn-
+ing.&amp;quot;, the first DeepMind’s paper. And Space Invader is a game that human level performance is hard to achieve in the early works of DQN.&lt;/p&gt;
+&lt;h2 id=&#34;related-work&#34;&gt;Related Work&lt;/h2&gt;
+&lt;p&gt;DeepMind’s two early papers has two versions; we chose the version that uses three convolutional layers and one FC layer with 512 hidden units. This particular model for Space Invader has 6 outputs. All of the layers are followed by ReLU except the last output layer.&lt;/p&gt;
+&lt;h2 id=&#34;target-network&#34;&gt;Target Network&lt;/h2&gt;
+&lt;p&gt;Because of the shifting weights of Q model, DeepMind has suggested to use two Q networks. This is related to divergence of Reinforcement Learning. The first network consistently updates as normal DNN would, but the second network, called the target network, doesn’t have sequential updates but is used to estimate the value of next state. Because of this it’s updated every 10,000 frames, but this can be changed through hyperparameter settings. According to the Deep-Mind’s paper, target network prevents of falling into a bad local minima and shifting weights. Thus, the target network has different set of parameters θ.&lt;/p&gt;
+&lt;h2 id=&#34;experience-replay&#34;&gt;Experience Replay&lt;/h2&gt;
+&lt;p&gt;Our problem includes correlations of sequences of input which consists of actions and states. In order to break
+this, DeepMind suggests to use Experience Replay. Experience Replay is another word for big sampling pool. The
+continuous sequences of data can be recorded to become a large pool, which can be used for sampling later. As we get more and more data, having correlation between sampled batch is more unlikely. Thereby, sampled batchs can be treated as if they are independent themselves.&lt;/p&gt;
+&lt;h2 id=&#34;dql-agent-playing-space-invaders&#34;&gt;DQL Agent playing Space Invaders&lt;/h2&gt;
+
+&lt;div style=&#34;position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;&#34;&gt;
+  &lt;iframe src=&#34;https://www.youtube.com/embed/OiTcfCf7Z-E&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;&#34; allowfullscreen title=&#34;YouTube Video&#34;&gt;&lt;/iframe&gt;
+&lt;/div&gt;
+
+&lt;h2 id=&#34;acknowledgement&#34;&gt;Acknowledgement&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;This project was advised by &lt;a href=&#34;https://jasirign.github.io&#34;&gt;Justin Sirignano&lt;/a&gt;.&lt;/li&gt;
+&lt;li&gt;This project was tested and reviewed by Seongsu Ha&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Q-Learning Agent in VR</title>
+      <link>/project/q-learning-vr/</link>
+      <pubDate>Thu, 27 Dec 2018 00:00:00 +0000</pubDate>
+      <guid>/project/q-learning-vr/</guid>
+      <description>&lt;h2 id=&#34;2-qlearning-agents-playing-each-other&#34;&gt;2 Q-Learning Agents Playing each other&lt;/h2&gt;
+
+&lt;div style=&#34;position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;&#34;&gt;
+  &lt;iframe src=&#34;https://www.youtube.com/embed/sqJ12PzacdU&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;&#34; allowfullscreen title=&#34;YouTube Video&#34;&gt;&lt;/iframe&gt;
+&lt;/div&gt;
+
+&lt;h2 id=&#34;acknowledgement&#34;&gt;Acknowledgement&lt;/h2&gt;
+&lt;p&gt;This project was advised by Prof. &lt;a href=&#34;https://cs.illinois.edu/directory/profile/shaffer1&#34;&gt;Eric Shaffer&lt;/a&gt;, and supervised by &lt;a href=&#34;https://www.linkedin.com/in/jonathan-hoelzel&#34;&gt;Jonathan Hoelzel&lt;/a&gt;.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;AI, Physics, and Graphics Programming by Byung Il Choi&lt;/li&gt;
+&lt;li&gt;Graphics Programming and Game Play by Seongsu Ha&lt;/li&gt;
+&lt;li&gt;User Interface and Graphic Design by Chris Wegenek&lt;/li&gt;
+&lt;li&gt;Sound and Testing by Alejandro Marin&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Generative Query Expansion</title>
+      <link>/project/gqe-timan/</link>
+      <pubDate>Wed, 15 Nov 2017 00:00:00 +0000</pubDate>
+      <guid>/project/gqe-timan/</guid>
+      <description>&lt;h2 id=&#34;introduction&#34;&gt;Introduction&lt;/h2&gt;
+&lt;p&gt;In many query expansion studies, the primary evaluation depends on its search result. This project tries to provide a second way of measuring QE performance by measuring how many query expansion terms overlaps with ideal expansion terms, where ideal expansion terms are trained from a high performing QE from supervised learning.&lt;/p&gt;
+&lt;h2 id=&#34;currently&#34;&gt;Currently&lt;/h2&gt;
+&lt;p&gt;Updating this page.&lt;/p&gt;
+&lt;h2 id=&#34;acknowledgement&#34;&gt;Acknowledgement&lt;/h2&gt;
+&lt;p&gt;This project is advised by Prof. &lt;a href=&#34;http://czhai.cs.illinois.edu&#34;&gt;Cheng Xiang Zhai&lt;/a&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Realtime Fractal Zooming with CUDA</title>
+      <link>/project/mandelbrotcuda/</link>
+      <pubDate>Mon, 27 Apr 2015 00:00:00 +0000</pubDate>
+      <guid>/project/mandelbrotcuda/</guid>
+      <description>&lt;h2 id=&#34;1-visualizing-mandelbrot-set-in-realtime&#34;&gt;1. Visualizing Mandelbrot set in realtime&lt;/h2&gt;
+&lt;p&gt;Mandelbrot set can be visualized using OpenGL and cuda together as above. If this is rendered using CPU&lt;sup id=&#34;fnref:1&#34;&gt;&lt;a href=&#34;#fn:1&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;1&lt;/a&gt;&lt;/sup&gt;, its FPS is as below:&lt;/p&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure&gt;
+
+
+  &lt;a data-fancybox=&#34;&#34; href=&#34;figure1.jpg&#34; data-caption=&#34;CPU usage&#34;&gt;
+&lt;img src=&#34;figure1.jpg&#34; alt=&#34;&#34; &gt;&lt;/a&gt;
+
+
+  
+  
+  &lt;figcaption&gt;
+    CPU usage
+  &lt;/figcaption&gt;
+
+
+&lt;/figure&gt;
+
+&lt;p&gt;There is no parallelization with the base CPU model. Procedural double loop and heavy calculation is very slow that causes the rendering to become uninteractive. This is, however, very a good subject for the GPU parallel computation. Because, it has a small amount of branchings and rare memory access. Each pixel will have independency for computation in lots of cases.&lt;/p&gt;
+&lt;h2 id=&#34;2-using-gpu-for-realtime-visualization&#34;&gt;2. Using GPU for realtime visualization&lt;/h2&gt;
+&lt;p&gt;Converting double loop to a single loop is simple in case of rendering mandelbrot set, since PBO has a linear memory space. Similar to parallel histogram computation, the distrbution of computation can be easily done with GPU model.&lt;/p&gt;
+&lt;p&gt;Using proper amount of threads boosts the speed as following:&lt;/p&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure&gt;
+
+
+  &lt;a data-fancybox=&#34;&#34; href=&#34;figure2.jpg&#34; data-caption=&#34;GPU usage&#34;&gt;
+&lt;img src=&#34;figure2.jpg&#34; alt=&#34;&#34; &gt;&lt;/a&gt;
+
+
+  
+  
+  &lt;figcaption&gt;
+    GPU usage
+  &lt;/figcaption&gt;
+
+
+&lt;/figure&gt;
+
+&lt;p&gt;The left shows a kernel with 49x1024 threads, which boosts about 333 times compared to the base model. With proper thread-block dimension, 15% more improvement can be acheived.&lt;/p&gt;
+&lt;h2 id=&#34;3-nstream-rendering&#34;&gt;3. n-stream rendering&lt;/h2&gt;
+&lt;p&gt;The above kernel in section 2 renders about 42 pixels per thread &lt;sup id=&#34;fnref:2&#34;&gt;&lt;a href=&#34;#fn:2&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;2&lt;/a&gt;&lt;/sup&gt;, where each thread&#39;s memory access will be about 168 bytes apart with no global memory access. Even for writing, it is better to coalesce the memory access for a better cache use. Instead of reindexing the writing process, changing the calculation level to per-pixel base can help for speeding up the calculation with a parallelization. Using 42 streams with 376x128 threads can speed up even more as below:&lt;/p&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure&gt;
+
+
+  &lt;a data-fancybox=&#34;&#34; href=&#34;figure3.jpg&#34; data-caption=&#34;GPU speedup with streams&#34;&gt;
+&lt;img src=&#34;figure3.jpg&#34; alt=&#34;&#34; &gt;&lt;/a&gt;
+
+
+  
+  
+  &lt;figcaption&gt;
+    GPU speedup with streams
+  &lt;/figcaption&gt;
+
+
+&lt;/figure&gt;
+
+&lt;p&gt;This is about 650 times faster than the base CPU model. The use of shared memory could not speed up the process since the GPU model didn&#39;t depend on previously calculated values. The realtime visualization of Mandelbrot set was a problem for how to distribute the computation than how to optimize the kernel.&lt;/p&gt;
+&lt;h2 id=&#34;4-realtime-visualization&#34;&gt;4. Realtime Visualization&lt;/h2&gt;
+&lt;p&gt;The GPU model can be visualized in realtime as below:
+
+&lt;div style=&#34;position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;&#34;&gt;
+  &lt;iframe src=&#34;https://www.youtube.com/embed/rqsVY-9iMKo&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;&#34; allowfullscreen title=&#34;YouTube Video&#34;&gt;&lt;/iframe&gt;
+&lt;/div&gt;
+&lt;/p&gt;
+&lt;h2 id=&#34;acknowledgement&#34;&gt;Acknowledgement&lt;/h2&gt;
+&lt;p&gt;This project was advised by Prof. &lt;a href=&#34;https://www3.cs.stonybrook.edu/~mueller/&#34;&gt;Klaus Mueller&lt;/a&gt;.&lt;/p&gt;
+&lt;h2 id=&#34;footnotes&#34;&gt;Footnotes&lt;/h2&gt;
+&lt;section class=&#34;footnotes&#34; role=&#34;doc-endnotes&#34;&gt;
+&lt;hr&gt;
+&lt;ol&gt;
+&lt;li id=&#34;fn:1&#34; role=&#34;doc-endnote&#34;&gt;
+&lt;p&gt;using AMD 8300 in 2015&lt;/p&gt;
+&lt;/li&gt;
+&lt;li id=&#34;fn:2&#34; role=&#34;doc-endnote&#34;&gt;
+&lt;p&gt;using Nvidia 780 gtx&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/section&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Etc</title>
+      <link>/project/etc/</link>
+      <pubDate>Tue, 27 Jan 1981 00:00:00 +0000</pubDate>
+      <guid>/project/etc/</guid>
+      <description>&lt;h3 id=&#34;2006-finger-touch-tracking-adjustable-game-probability&#34;&gt;2006 Finger Touch Tracking, Adjustable Game Probability&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;Worked on a project for finger tracking with Bezier Forward Difference&lt;/li&gt;
+&lt;li&gt;Worked on adjustable game probability in Impression Co.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3 id=&#34;2004-physics-and-3d-graphics-engine-in-dx11&#34;&gt;2004 Physics and 3D Graphics Engine in DX11&lt;/h3&gt;
+&lt;p&gt;I&#39;ve worked on 3D Graphics/Physics Engine in Laon Soft&lt;/p&gt;
+&lt;h3 id=&#34;2002-scene-graph-library-maya-plugin&#34;&gt;2002 Scene Graph Library, Maya Plugin&lt;/h3&gt;
+&lt;p&gt;I&#39;ve worked on building scene graph library and related Maya Plugins in Cenozoic Co.&lt;/p&gt;
+&lt;h3 id=&#34;2001-motion-capture-reprocessing&#34;&gt;2001 Motion Capture Reprocessing&lt;/h3&gt;
+&lt;p&gt;I&#39;ve worked on motion captured data reprocessing in Cenozoic Co.&lt;/p&gt;
+&lt;h3 id=&#34;1998-text-mud&#34;&gt;1998 Text MUD&lt;/h3&gt;
+&lt;p&gt;Worked on Text MUD game for personal enjoyment&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

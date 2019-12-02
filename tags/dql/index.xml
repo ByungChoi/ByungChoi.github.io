@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>DQL | byung.org</title>
+    <link>/tags/dql/</link>
+      <atom:link href="/tags/dql/index.xml" rel="self" type="application/rss+xml" />
+    <description>DQL</description>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>some copyrights; (2015)</copyright><lastBuildDate>Tue, 01 Jan 2019 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>/img/icon-192.png</url>
+      <title>DQL</title>
+      <link>/tags/dql/</link>
+    </image>
+    
+    <item>
+      <title>Deep Q-Learning for Atari Games</title>
+      <link>/project/dql-atari/</link>
+      <pubDate>Tue, 01 Jan 2019 00:00:00 +0000</pubDate>
+      <guid>/project/dql-atari/</guid>
+      <description>&lt;h2 id=&#34;introduction&#34;&gt;Introduction&lt;/h2&gt;
+&lt;p&gt;The reinforcement learning has been around for more than a decade [2] , and Q-learning is one of most famous method for RL. DeepMind has especially utilized Q-learning, and evolved the idea to the next level by adapting non-linear model. Instead of Q table, Neural network is now used to predict the values, which is called Deep Q Network. The CNN and Deep Q-learning is what DeepMind’s work is all about.&lt;/p&gt;
+&lt;h2 id=&#34;problem&#34;&gt;Problem&lt;/h2&gt;
+&lt;p&gt;DQN has to observe a game from ATARI and be trained to beat human level performance. Since Space Invader was the main example of early Deep-Mind’s paper, we are going to chose the game for this project. We are going to train our model to achieve the score of 500, which is the result of &amp;ldquo;Playing atari with deep reinforcement learn-
+ing.&amp;quot;, the first DeepMind’s paper. And Space Invader is a game that human level performance is hard to achieve in the early works of DQN.&lt;/p&gt;
+&lt;h2 id=&#34;related-work&#34;&gt;Related Work&lt;/h2&gt;
+&lt;p&gt;DeepMind’s two early papers has two versions; we chose the version that uses three convolutional layers and one FC layer with 512 hidden units. This particular model for Space Invader has 6 outputs. All of the layers are followed by ReLU except the last output layer.&lt;/p&gt;
+&lt;h2 id=&#34;target-network&#34;&gt;Target Network&lt;/h2&gt;
+&lt;p&gt;Because of the shifting weights of Q model, DeepMind has suggested to use two Q networks. This is related to divergence of Reinforcement Learning. The first network consistently updates as normal DNN would, but the second network, called the target network, doesn’t have sequential updates but is used to estimate the value of next state. Because of this it’s updated every 10,000 frames, but this can be changed through hyperparameter settings. According to the Deep-Mind’s paper, target network prevents of falling into a bad local minima and shifting weights. Thus, the target network has different set of parameters θ.&lt;/p&gt;
+&lt;h2 id=&#34;experience-replay&#34;&gt;Experience Replay&lt;/h2&gt;
+&lt;p&gt;Our problem includes correlations of sequences of input which consists of actions and states. In order to break
+this, DeepMind suggests to use Experience Replay. Experience Replay is another word for big sampling pool. The
+continuous sequences of data can be recorded to become a large pool, which can be used for sampling later. As we get more and more data, having correlation between sampled batch is more unlikely. Thereby, sampled batchs can be treated as if they are independent themselves.&lt;/p&gt;
+&lt;h2 id=&#34;dql-agent-playing-space-invaders&#34;&gt;DQL Agent playing Space Invaders&lt;/h2&gt;
+
+&lt;div style=&#34;position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;&#34;&gt;
+  &lt;iframe src=&#34;https://www.youtube.com/embed/OiTcfCf7Z-E&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;&#34; allowfullscreen title=&#34;YouTube Video&#34;&gt;&lt;/iframe&gt;
+&lt;/div&gt;
+
+&lt;h2 id=&#34;acknowledgement&#34;&gt;Acknowledgement&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;This project was advised by &lt;a href=&#34;https://jasirign.github.io&#34;&gt;Justin Sirignano&lt;/a&gt;.&lt;/li&gt;
+&lt;li&gt;This project was tested and reviewed by Seongsu Ha&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>
