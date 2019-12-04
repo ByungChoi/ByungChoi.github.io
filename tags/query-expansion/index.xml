@@ -5,12 +5,22 @@
     <link>/tags/query-expansion/</link>
       <atom:link href="/tags/query-expansion/index.xml" rel="self" type="application/rss+xml" />
     <description>Query Expansion</description>
-    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>some copyrights; (2015)</copyright><lastBuildDate>Wed, 15 Nov 2017 00:00:00 +0000</lastBuildDate>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>some copyrights; (2015)</copyright><lastBuildDate>Sun, 07 Apr 2019 00:00:00 +0000</lastBuildDate>
     <image>
       <url>/img/icon-192.png</url>
       <title>Query Expansion</title>
       <link>/tags/query-expansion/</link>
     </image>
+    
+    <item>
+      <title>Generative Query Expansion, Stochastic Approach with Quantitative Analysis</title>
+      <link>/publication/gqe_timan/</link>
+      <pubDate>Sun, 07 Apr 2019 00:00:00 +0000</pubDate>
+      <guid>/publication/gqe_timan/</guid>
+      <description>&lt;!-- raw HTML omitted --&gt;
+&lt;p&gt;Currently In Progress&lt;/p&gt;
+</description>
+    </item>
     
     <item>
       <title>Generative Query Expansion</title>

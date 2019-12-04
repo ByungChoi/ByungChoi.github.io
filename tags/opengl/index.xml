@@ -5,12 +5,22 @@
     <link>/tags/opengl/</link>
       <atom:link href="/tags/opengl/index.xml" rel="self" type="application/rss+xml" />
     <description>OpenGL</description>
-    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>some copyrights; (2015)</copyright><lastBuildDate>Sun, 17 Nov 2019 00:00:00 +0000</lastBuildDate>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>some copyrights; (2015)</copyright><lastBuildDate>Sun, 01 Dec 2019 00:00:00 +0000</lastBuildDate>
     <image>
       <url>/img/icon-192.png</url>
       <title>OpenGL</title>
       <link>/tags/opengl/</link>
     </image>
+    
+    <item>
+      <title>Progressive Growing GAN for Terrain Generation</title>
+      <link>/publication/proganterrain/</link>
+      <pubDate>Sun, 01 Dec 2019 00:00:00 +0000</pubDate>
+      <guid>/publication/proganterrain/</guid>
+      <description>&lt;!-- raw HTML omitted --&gt;
+&lt;p&gt;Currently In Progress&lt;/p&gt;
+</description>
+    </item>
     
     <item>
       <title>Terrain Generation with GAN</title>
@@ -109,27 +119,6 @@
 &lt;p&gt;This research project was advised by Prof. &lt;a href=&#34;https://cs.illinois.edu/directory/profile/shaffer1&#34;&gt;Eric Shaffer&lt;/a&gt;.&lt;/p&gt;
 &lt;h2 id=&#34;misc&#34;&gt;Misc.&lt;/h2&gt;
 &lt;p&gt;MNIST digits generation using Progressive Growing GAN&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>Etc</title>
-      <link>/project/etc/</link>
-      <pubDate>Tue, 27 Jan 1981 00:00:00 +0000</pubDate>
-      <guid>/project/etc/</guid>
-      <description>&lt;h3 id=&#34;2006-finger-touch-tracking-adjustable-game-probability&#34;&gt;2006 Finger Touch Tracking, Adjustable Game Probability&lt;/h3&gt;
-&lt;ol&gt;
-&lt;li&gt;Worked on a project for finger tracking with Bezier Forward Difference&lt;/li&gt;
-&lt;li&gt;Worked on adjustable game probability in Impression Co.&lt;/li&gt;
-&lt;/ol&gt;
-&lt;h3 id=&#34;2004-physics-and-3d-graphics-engine-in-dx11&#34;&gt;2004 Physics and 3D Graphics Engine in DX11&lt;/h3&gt;
-&lt;p&gt;I&#39;ve worked on 3D Graphics/Physics Engine in Laon Soft&lt;/p&gt;
-&lt;h3 id=&#34;2002-scene-graph-library-maya-plugin&#34;&gt;2002 Scene Graph Library, Maya Plugin&lt;/h3&gt;
-&lt;p&gt;I&#39;ve worked on building scene graph library and related Maya Plugins in Cenozoic Co.&lt;/p&gt;
-&lt;h3 id=&#34;2001-motion-capture-reprocessing&#34;&gt;2001 Motion Capture Reprocessing&lt;/h3&gt;
-&lt;p&gt;I&#39;ve worked on motion captured data reprocessing in Cenozoic Co.&lt;/p&gt;
-&lt;h3 id=&#34;1998-text-mud&#34;&gt;1998 Text MUD&lt;/h3&gt;
-&lt;p&gt;Worked on Text MUD game for personal enjoyment&lt;/p&gt;
 </description>
     </item>
     

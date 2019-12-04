@@ -158,7 +158,19 @@ continuous sequences of data can be recorded to become a large pool, which can b
       <link>/project/q-learning-vr/</link>
       <pubDate>Thu, 27 Dec 2018 00:00:00 +0000</pubDate>
       <guid>/project/q-learning-vr/</guid>
-      <description>&lt;h2 id=&#34;2-qlearning-agents-playing-each-other&#34;&gt;2 Q-Learning Agents Playing each other&lt;/h2&gt;
+      <description>&lt;h2 id=&#34;introduction&#34;&gt;Introduction&lt;/h2&gt;
+&lt;p&gt;An AI agent is often not tangible. It’s an artificially being that usually resides in virtual space. We can seldom see robots and drones with AI on media, but not usually in the physical world. It’s very hard to bring agents to the physical world, but if we let them stay in their space, it becomes a lot easier to interact. The VR technologies let us be in a virtual space, thus we can experience the embodiment of an AI agent. This project is motivated by this gateway to space of another being.&lt;/p&gt;
+&lt;h2 id=&#34;problem&#34;&gt;Problem&lt;/h2&gt;
+&lt;p&gt;It’s very costly to bring AI to physical space, and it would cost a tremendous amount to develop and test such agent in physical space. But, if we are able to simulate good enough for AI agents, we believe that the cost of development can be reduced drastically. And, we believe the AI agent in VR can be very entertaining.&lt;/p&gt;
+&lt;h2 id=&#34;practices&#34;&gt;Practices&lt;/h2&gt;
+&lt;p&gt;For comfortable experience, OBP suggests few things. And, these are the main guideline that we will follow:&lt;br&gt;
+(i) distance to focusing object is between 0.75 and 3.5 meters [OBP 10],&lt;br&gt;
+(ii) post-processing effects are applied to both eyes [OBP 10],&lt;br&gt;
+(iii) use default FOV [OBP 13],&lt;br&gt;
+(iv) Viewing the environment from a stationary position is most comfortable. [OBP 6] Users will mostly be standing in a training-stage, and evaluation stage in a game form would also mostly be in a stationary position.&lt;/p&gt;
+&lt;h3 id=&#34;exceptions&#34;&gt;Exceptions&lt;/h3&gt;
+&lt;p&gt;In case of having the network visualized as extra work, there may be a possibility of having frame-rate drops. But, this is only if we do the extra work.&lt;/p&gt;
+&lt;h2 id=&#34;2-qlearning-agents-playing-each-other&#34;&gt;2 Q-Learning Agents Playing each other&lt;/h2&gt;
 
 &lt;div style=&#34;position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;&#34;&gt;
   &lt;iframe src=&#34;https://www.youtube.com/embed/sqJ12PzacdU&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;&#34; allowfullscreen title=&#34;YouTube Video&#34;&gt;&lt;/iframe&gt;
@@ -320,17 +332,16 @@ continuous sequences of data can be recorded to become a large pool, which can b
       <link>/project/etc/</link>
       <pubDate>Tue, 27 Jan 1981 00:00:00 +0000</pubDate>
       <guid>/project/etc/</guid>
-      <description>&lt;h3 id=&#34;2006-finger-touch-tracking-adjustable-game-probability&#34;&gt;2006 Finger Touch Tracking, Adjustable Game Probability&lt;/h3&gt;
-&lt;ol&gt;
-&lt;li&gt;Worked on a project for finger tracking with Bezier Forward Difference&lt;/li&gt;
-&lt;li&gt;Worked on adjustable game probability in Impression Co.&lt;/li&gt;
-&lt;/ol&gt;
-&lt;h3 id=&#34;2004-physics-and-3d-graphics-engine-in-dx11&#34;&gt;2004 Physics and 3D Graphics Engine in DX11&lt;/h3&gt;
-&lt;p&gt;I&#39;ve worked on 3D Graphics/Physics Engine in Laon Soft&lt;/p&gt;
-&lt;h3 id=&#34;2002-scene-graph-library-maya-plugin&#34;&gt;2002 Scene Graph Library, Maya Plugin&lt;/h3&gt;
-&lt;p&gt;I&#39;ve worked on building scene graph library and related Maya Plugins in Cenozoic Co.&lt;/p&gt;
-&lt;h3 id=&#34;2001-motion-capture-reprocessing&#34;&gt;2001 Motion Capture Reprocessing&lt;/h3&gt;
-&lt;p&gt;I&#39;ve worked on motion captured data reprocessing in Cenozoic Co.&lt;/p&gt;
+      <description>&lt;h3 id=&#34;2009-finger-touch-tracking&#34;&gt;2009 Finger Touch Tracking,&lt;/h3&gt;
+&lt;p&gt;R&amp;amp;D: Worked on a project for finger tracking with Bezier Forward Difference&lt;/p&gt;
+&lt;h3 id=&#34;2008-adjustable-game-probabilities-with-constraints&#34;&gt;2008 Adjustable Game Probabilities with Constraints&lt;/h3&gt;
+&lt;p&gt;R&amp;amp;D: Worked on adjustable game probability in Impression Co.&lt;/p&gt;
+&lt;h3 id=&#34;2006-camera-work-and-shader-coputation&#34;&gt;2006 Camera Work and Shader Coputation&lt;/h3&gt;
+&lt;p&gt;R&amp;amp;D: Worked on Camera Work related to curve tracking and Shader Computation&lt;/p&gt;
+&lt;h3 id=&#34;2003-scene-graph-library-maya-plugin&#34;&gt;2003 Scene Graph Library, Maya Plugin&lt;/h3&gt;
+&lt;p&gt;R&amp;amp;D: Worked on building scene graph library and related Maya Plugins in Cenozoic Co.&lt;/p&gt;
+&lt;h3 id=&#34;2001-skeleton-retargeting-and-motion-capture-reprocessing&#34;&gt;2001 Skeleton Retargeting and Motion Capture Reprocessing&lt;/h3&gt;
+&lt;p&gt;R&amp;amp;D: Worked on motion captured data reprocessing in Cenozoic Co.&lt;/p&gt;
 &lt;h3 id=&#34;1998-text-mud&#34;&gt;1998 Text MUD&lt;/h3&gt;
 &lt;p&gt;Worked on Text MUD game for personal enjoyment&lt;/p&gt;
 </description>

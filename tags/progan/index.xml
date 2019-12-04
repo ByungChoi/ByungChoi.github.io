@@ -5,12 +5,22 @@
     <link>/tags/progan/</link>
       <atom:link href="/tags/progan/index.xml" rel="self" type="application/rss+xml" />
     <description>ProGAN</description>
-    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>some copyrights; (2015)</copyright><lastBuildDate>Sun, 17 Nov 2019 00:00:00 +0000</lastBuildDate>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>some copyrights; (2015)</copyright><lastBuildDate>Sun, 01 Dec 2019 00:00:00 +0000</lastBuildDate>
     <image>
       <url>/img/icon-192.png</url>
       <title>ProGAN</title>
       <link>/tags/progan/</link>
     </image>
+    
+    <item>
+      <title>Progressive Growing GAN for Terrain Generation</title>
+      <link>/publication/proganterrain/</link>
+      <pubDate>Sun, 01 Dec 2019 00:00:00 +0000</pubDate>
+      <guid>/publication/proganterrain/</guid>
+      <description>&lt;!-- raw HTML omitted --&gt;
+&lt;p&gt;Currently In Progress&lt;/p&gt;
+</description>
+    </item>
     
     <item>
       <title>Terrain Generation with GAN</title>

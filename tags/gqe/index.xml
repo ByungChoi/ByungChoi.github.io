@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>GQE | byung.org</title>
+    <link>/tags/gqe/</link>
+      <atom:link href="/tags/gqe/index.xml" rel="self" type="application/rss+xml" />
+    <description>GQE</description>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>some copyrights; (2015)</copyright><lastBuildDate>Sun, 07 Apr 2019 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>/img/icon-192.png</url>
+      <title>GQE</title>
+      <link>/tags/gqe/</link>
+    </image>
+    
+    <item>
+      <title>Generative Query Expansion, Stochastic Approach with Quantitative Analysis</title>
+      <link>/publication/gqe_timan/</link>
+      <pubDate>Sun, 07 Apr 2019 00:00:00 +0000</pubDate>
+      <guid>/publication/gqe_timan/</guid>
+      <description>&lt;!-- raw HTML omitted --&gt;
+&lt;p&gt;Currently In Progress&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>
