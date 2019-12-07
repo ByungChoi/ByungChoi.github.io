@@ -522,11 +522,139 @@
 
     <div class="article-style">
       <h2 id="introduction">Introduction</h2>
-<p>In many query expansion studies, the primary evaluation depends on its search result. This project tries to provide a second way of measuring QE performance by measuring how many query expansion terms overlaps with ideal expansion terms, where ideal expansion terms are trained from a high performing QE from supervised learning.</p>
-<h2 id="currently">Currently</h2>
-<p>Updating this page.</p>
+<p>In many query expansion studies, the primary evaluation depends on its search result. This project tries to provide a second way<sup id="fnref:1"><a href="#fn:1" class="footnote-ref" role="doc-noteref">1</a></sup> of measuring QE performance by measuring how many query expansion terms overlaps with ideal expansion terms, where ideal expansion terms are trained from a high performing QE from supervised learning.</p>
+<h2 id="approaches">Approaches</h2>
+<p>(i) Try to find expansion cadidates using GQE model which tries find the terms that maximizes the probability of coocurrening terms.<br>
+(ii) Try to see if maximizing probabilities of coocurring terms is the right way<br>
+(iii) Try to find cohesiveness of coocurring terms</p>
+<h2 id="finding-ideal-expansion-terms">Finding Ideal Expansion Terms</h2>
+<p>We need to find ideal expansion terms first, so we have a criterion for comparing model's ouput. A supervised learning can find expansion terms that performs search well as it gives a result with high P@10 and MAP.
+The ideal expansion from training on AP88/89 performs as following:</p>
+<table>
+<thead>
+<tr>
+<th>Expansion</th>
+<th>p@5</th>
+<th>p@10</th>
+<th>MAP@10</th>
+<th>MAP@100</th>
+<th>MAP@1k</th>
+<th>Recall@1k</th>
+<th>Recall@10k</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>+0 terms</td>
+<td>0.41</td>
+<td>0.371</td>
+<td>0.28</td>
+<td>&lt; 0.25</td>
+<td>&lt; 0.25</td>
+<td>0.662</td>
+<td>0.861</td>
+</tr>
+<tr>
+<td>+400</td>
+<td>0.906</td>
+<td>0.827</td>
+<td>0.817</td>
+<td>0.556</td>
+<td>0.546</td>
+<td>0.8578</td>
+<td>0.9642</td>
+</tr>
+<tr>
+<td>+2000</td>
+<td>0.98</td>
+<td>0.959</td>
+<td>0.9832</td>
+<td>0.8734</td>
+<td>0.7935</td>
+<td>0.8825</td>
+<td>0.9495</td>
+</tr>
+</tbody>
+</table>
+<p>In early work, the goal was to find 400-expansion terms. Later, we found that 400 was not the upper bound but 2000+ terms could be used for expansion.</p>
+<h2 id="early-work">Early Work</h2>
+<p>The first approach assumes that 400 expansion terms are enough quantity for QE. The top-100 terms that maxmizes the probability of coocurrence decides high amount of MAP. So, finding these top-100 terms are important as top-100 contributes most to the maximization. GQE finds top 100 as below:</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<figure>
+
+
+  <a data-fancybox="" href="result_early.jpg" data-caption="generated terrain colors">
+<img src="result_early.jpg" alt="" ></a>
+
+
+  
+  
+  <figcaption>
+    generated terrain colors
+  </figcaption>
+
+
+</figure>
+
+<p>The above graph is in query level measurment which shows how many exansion terms could be found that are in top-100 ideal expansion terms.</p>
+<p>The larger model finds more ideal expansion terms, but so is the false positive expansion candidates.</p>
+<h2 id="quality-vs-quantity">Quality vs Quantity</h2>
+<p>The early work tries find terms that maximizes the probability of coocurrence, and it focused on top 100 terms. During the process, we found that the number of expandable terms can be more than 1000 and it gives a much better result as we see below:</p>
+<table>
+<thead>
+<tr>
+<th>Expansion</th>
+<th>p@5</th>
+<th>p@10</th>
+<th>MAP@10</th>
+<th>MAP@100</th>
+<th>MAP@1k</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>+400</td>
+<td>0.906</td>
+<td>0.827</td>
+<td>0.817</td>
+<td>0.556</td>
+<td>0.546</td>
+</tr>
+<tr>
+<td>+2000</td>
+<td>0.98</td>
+<td>0.959</td>
+<td>0.9832</td>
+<td>0.8734</td>
+<td>0.7935</td>
+</tr>
+</tbody>
+</table>
+<p>Let's use Monte Carlo method to make sure that the quantity matters more than quality; we randomly pick n terms from the ideal expansion term pool that we got from supervised learning, and see how it performs below:</p>
+<h2 id="recent-work">Recent Work</h2>
+<p>The idea of finding top 100 ideal expansion is not the right direction as we found that 400 ideal expansion terms were at its local maxima for its performance. The quantity of expansion term mattered more than the quality, where the quality is high when the ideal expansion terms maximizes the co-occurrence probability of the expansion terms.</p>
 <h2 id="acknowledgement">Acknowledgement</h2>
 <p>This project is advised by Prof. <a href="http://czhai.cs.illinois.edu">Cheng Xiang Zhai</a></p>
+<section class="footnotes" role="doc-endnotes">
+<hr>
+<ol>
+<li id="fn:1" role="doc-endnote">
+<p>This project is currently under progress.</p>
+</li>
+</ol>
+</section>
 
     </div>
 

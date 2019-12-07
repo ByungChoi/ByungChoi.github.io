@@ -3,54 +3,6 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>/hh1/hero/</loc>
-  </url>
-  
-  <url>
-    <loc>/hh1/demo/</loc>
-  </url>
-  
-  <url>
-    <loc>/hh1/skills/</loc>
-  </url>
-  
-  <url>
-    <loc>/hh1/posts/</loc>
-  </url>
-  
-  <url>
-    <loc>/hh1/people/</loc>
-  </url>
-  
-  <url>
-    <loc>/hh1/talks/</loc>
-  </url>
-  
-  <url>
-    <loc>/hh1/featured/</loc>
-  </url>
-  
-  <url>
-    <loc>/hh1/publications/</loc>
-  </url>
-  
-  <url>
-    <loc>/hh1/tags/</loc>
-  </url>
-  
-  <url>
-    <loc>/hh1/contact/</loc>
-  </url>
-  
-  <url>
-    <loc>/hh1/accomplishments/</loc>
-  </url>
-  
-  <url>
-    <loc>/hh1/experience/</loc>
-  </url>
-  
-  <url>
     <loc>/authors/admin/</loc>
     <lastmod>2019-12-01T00:00:00+00:00</lastmod>
   </url>
@@ -252,10 +204,6 @@
   
   <url>
     <loc>/categories/</loc>
-  </url>
-  
-  <url>
-    <loc>/hh1/</loc>
   </url>
   
   <url>
