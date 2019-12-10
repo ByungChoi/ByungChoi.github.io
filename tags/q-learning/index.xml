@@ -49,26 +49,35 @@ continuous sequences of data can be recorded to become a large pool, which can b
       <link>/project/q-learning-vr/</link>
       <pubDate>Thu, 27 Dec 2018 00:00:00 +0000</pubDate>
       <guid>/project/q-learning-vr/</guid>
-      <description>&lt;h2 id=&#34;introduction&#34;&gt;Introduction&lt;/h2&gt;
+      <description>&lt;h2 id=&#34;1-introduction&#34;&gt;1. Introduction&lt;/h2&gt;
 &lt;p&gt;An AI agent is often not tangible. It’s an artificially being that usually resides in virtual space. We can seldom see robots and drones with AI on media, but not usually in the physical world. It’s very hard to bring agents to the physical world, but if we let them stay in their space, it becomes a lot easier to interact. The VR technologies let us be in a virtual space, thus we can experience the embodiment of an AI agent. This project is motivated by this gateway to space of another being.&lt;/p&gt;
-&lt;h2 id=&#34;problem&#34;&gt;Problem&lt;/h2&gt;
+&lt;h2 id=&#34;2-problem&#34;&gt;2. Problem&lt;/h2&gt;
 &lt;p&gt;It’s very costly to bring AI to physical space, and it would cost a tremendous amount to develop and test such agent in physical space. But, if we are able to simulate good enough for AI agents, we believe that the cost of development can be reduced drastically. And, we believe the AI agent in VR can be very entertaining.&lt;/p&gt;
-&lt;h2 id=&#34;practices&#34;&gt;Practices&lt;/h2&gt;
+&lt;h2 id=&#34;3-practices&#34;&gt;3. Practices&lt;/h2&gt;
 &lt;p&gt;For comfortable experience, OBP suggests few things. And, these are the main guideline that we will follow:&lt;br&gt;
 (i) distance to focusing object is between 0.75 and 3.5 meters [OBP 10],&lt;br&gt;
 (ii) post-processing effects are applied to both eyes [OBP 10],&lt;br&gt;
 (iii) use default FOV [OBP 13],&lt;br&gt;
 (iv) Viewing the environment from a stationary position is most comfortable. [OBP 6] Users will mostly be standing in a training-stage, and evaluation stage in a game form would also mostly be in a stationary position.&lt;/p&gt;
-&lt;h3 id=&#34;exceptions&#34;&gt;Exceptions&lt;/h3&gt;
-&lt;p&gt;In case of having the network visualized as extra work, there may be a possibility of having frame-rate drops. But, this is only if we do the extra work.&lt;/p&gt;
-&lt;h2 id=&#34;2-qlearning-agents-playing-each-other&#34;&gt;2 Q-Learning Agents Playing each other&lt;/h2&gt;
+&lt;h2 id=&#34;4-rulles-for-agents&#34;&gt;4. Rulles for Agents&lt;/h2&gt;
+&lt;p&gt;All of the agents have 30 decisions/sec and moves in same speed except human players.
+When the ball bounces, its reflection anngle and speed randomly change, so that its harder for the AI agents. Without continuous random adjustments, Q-Agents can play the game for very long time. It&#39;s designed to test their limits.&lt;/p&gt;
+&lt;h3 id=&#34;51-qlearning-agents-playing-each-other&#34;&gt;5-1 Q-Learning Agents Playing each other&lt;/h3&gt;
 
 &lt;div style=&#34;position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;&#34;&gt;
-  &lt;iframe src=&#34;https://www.youtube.com/embed/sqJ12PzacdU&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;&#34; allowfullscreen title=&#34;YouTube Video&#34;&gt;&lt;/iframe&gt;
+  &lt;iframe src=&#34;https://www.youtube.com/embed/3fCz_Gp1MB4&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;&#34; allowfullscreen title=&#34;YouTube Video&#34;&gt;&lt;/iframe&gt;
 &lt;/div&gt;
 
+&lt;p&gt;Most of the mistakes are by off by an inch. The high ball speed can reduce the game time effectively.&lt;/p&gt;
+&lt;h3 id=&#34;52-qagent-vs-greedy-agent&#34;&gt;5-2 Q-Agent vs Greedy Agent&lt;/h3&gt;
+
+&lt;div style=&#34;position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;&#34;&gt;
+  &lt;iframe src=&#34;https://www.youtube.com/embed/-JLkZ-1K8n4&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;&#34; allowfullscreen title=&#34;YouTube Video&#34;&gt;&lt;/iframe&gt;
+&lt;/div&gt;
+
+&lt;p&gt;A greedy agent can never beat a Q-Learning agent, even though they have same decision making rates and moving speed.&lt;/p&gt;
 &lt;h2 id=&#34;acknowledgement&#34;&gt;Acknowledgement&lt;/h2&gt;
-&lt;p&gt;This project was advised by Prof. &lt;a href=&#34;https://cs.illinois.edu/directory/profile/shaffer1&#34;&gt;Eric Shaffer&lt;/a&gt;, and supervised by &lt;a href=&#34;https://www.linkedin.com/in/jonathan-hoelzel&#34;&gt;Jonathan Hoelzel&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;This project was advised by Prof. &lt;a href=&#34;https://cs.illinois.edu/directory/profile/shaffer1&#34;&gt;Eric Shaffer&lt;/a&gt;.&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;AI, Physics, and Graphics Programming by Byung Il Choi&lt;/li&gt;
 &lt;li&gt;Graphics Programming and Game Play by Seongsu Ha&lt;/li&gt;

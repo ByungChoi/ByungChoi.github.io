@@ -536,26 +536,35 @@
   <div class="article-container">
 
     <div class="article-style">
-      <h2 id="introduction">Introduction</h2>
+      <h2 id="1-introduction">1. Introduction</h2>
 <p>An AI agent is often not tangible. It’s an artificially being that usually resides in virtual space. We can seldom see robots and drones with AI on media, but not usually in the physical world. It’s very hard to bring agents to the physical world, but if we let them stay in their space, it becomes a lot easier to interact. The VR technologies let us be in a virtual space, thus we can experience the embodiment of an AI agent. This project is motivated by this gateway to space of another being.</p>
-<h2 id="problem">Problem</h2>
+<h2 id="2-problem">2. Problem</h2>
 <p>It’s very costly to bring AI to physical space, and it would cost a tremendous amount to develop and test such agent in physical space. But, if we are able to simulate good enough for AI agents, we believe that the cost of development can be reduced drastically. And, we believe the AI agent in VR can be very entertaining.</p>
-<h2 id="practices">Practices</h2>
+<h2 id="3-practices">3. Practices</h2>
 <p>For comfortable experience, OBP suggests few things. And, these are the main guideline that we will follow:<br>
 (i) distance to focusing object is between 0.75 and 3.5 meters [OBP 10],<br>
 (ii) post-processing effects are applied to both eyes [OBP 10],<br>
 (iii) use default FOV [OBP 13],<br>
 (iv) Viewing the environment from a stationary position is most comfortable. [OBP 6] Users will mostly be standing in a training-stage, and evaluation stage in a game form would also mostly be in a stationary position.</p>
-<h3 id="exceptions">Exceptions</h3>
-<p>In case of having the network visualized as extra work, there may be a possibility of having frame-rate drops. But, this is only if we do the extra work.</p>
-<h2 id="2-qlearning-agents-playing-each-other">2 Q-Learning Agents Playing each other</h2>
+<h2 id="4-rulles-for-agents">4. Rulles for Agents</h2>
+<p>All of the agents have 30 decisions/sec and moves in same speed except human players.
+When the ball bounces, its reflection anngle and speed randomly change, so that its harder for the AI agents. Without continuous random adjustments, Q-Agents can play the game for very long time. It's designed to test their limits.</p>
+<h3 id="51-qlearning-agents-playing-each-other">5-1 Q-Learning Agents Playing each other</h3>
 
 <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
-  <iframe src="https://www.youtube.com/embed/sqJ12PzacdU" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" allowfullscreen title="YouTube Video"></iframe>
+  <iframe src="https://www.youtube.com/embed/3fCz_Gp1MB4" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" allowfullscreen title="YouTube Video"></iframe>
 </div>
 
+<p>Most of the mistakes are by off by an inch. The high ball speed can reduce the game time effectively.</p>
+<h3 id="52-qagent-vs-greedy-agent">5-2 Q-Agent vs Greedy Agent</h3>
+
+<div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
+  <iframe src="https://www.youtube.com/embed/-JLkZ-1K8n4" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" allowfullscreen title="YouTube Video"></iframe>
+</div>
+
+<p>A greedy agent can never beat a Q-Learning agent, even though they have same decision making rates and moving speed.</p>
 <h2 id="acknowledgement">Acknowledgement</h2>
-<p>This project was advised by Prof. <a href="https://cs.illinois.edu/directory/profile/shaffer1">Eric Shaffer</a>, and supervised by <a href="https://www.linkedin.com/in/jonathan-hoelzel">Jonathan Hoelzel</a>.</p>
+<p>This project was advised by Prof. <a href="https://cs.illinois.edu/directory/profile/shaffer1">Eric Shaffer</a>.</p>
 <ul>
 <li>AI, Physics, and Graphics Programming by Byung Il Choi</li>
 <li>Graphics Programming and Game Play by Seongsu Ha</li>
