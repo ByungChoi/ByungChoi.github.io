@@ -13,10 +13,10 @@
     </image>
     
     <item>
-      <title>AI</title>
-      <link>/tags/ai/</link>
+      <title>Deep Learning</title>
+      <link>/tags/deep-learning/</link>
       <pubDate>Sun, 01 Dec 2019 00:00:00 +0000</pubDate>
-      <guid>/tags/ai/</guid>
+      <guid>/tags/deep-learning/</guid>
       <description></description>
     </item>
     
@@ -41,6 +41,14 @@
       <link>/tags/progan/</link>
       <pubDate>Sun, 01 Dec 2019 00:00:00 +0000</pubDate>
       <guid>/tags/progan/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Terrain</title>
+      <link>/tags/terrain/</link>
+      <pubDate>Sun, 01 Dec 2019 00:00:00 +0000</pubDate>
+      <guid>/tags/terrain/</guid>
       <description></description>
     </item>
     
@@ -77,18 +85,18 @@
     </item>
     
     <item>
-      <title>Reinforcement Learning</title>
-      <link>/tags/reinforcement-learning/</link>
+      <title>AI</title>
+      <link>/tags/ai/</link>
       <pubDate>Fri, 01 Feb 2019 00:00:00 +0000</pubDate>
-      <guid>/tags/reinforcement-learning/</guid>
+      <guid>/tags/ai/</guid>
       <description></description>
     </item>
     
     <item>
-      <title>Deep Learning</title>
-      <link>/tags/deep-learning/</link>
-      <pubDate>Tue, 01 Jan 2019 00:00:00 +0000</pubDate>
-      <guid>/tags/deep-learning/</guid>
+      <title>Reinforcement Learning</title>
+      <link>/tags/reinforcement-learning/</link>
+      <pubDate>Fri, 01 Feb 2019 00:00:00 +0000</pubDate>
+      <guid>/tags/reinforcement-learning/</guid>
       <description></description>
     </item>
     

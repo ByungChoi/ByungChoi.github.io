@@ -17,7 +17,7 @@
       <link>/project/chessalphazero/</link>
       <pubDate>Fri, 01 Feb 2019 00:00:00 +0000</pubDate>
       <guid>/project/chessalphazero/</guid>
-      <description>&lt;p&gt;The project is in very early stage.&lt;/p&gt;
+      <description>&lt;p&gt;The project is in a very early stage.&lt;/p&gt;
 </description>
     </item>
     
@@ -37,8 +37,8 @@
 (iii) use default FOV [OBP 13],&lt;br&gt;
 (iv) Viewing the environment from a stationary position is most comfortable. [OBP 6] Users will mostly be standing in a training-stage, and evaluation stage in a game form would also mostly be in a stationary position.&lt;/p&gt;
 &lt;h2 id=&#34;4-rules-for-agents&#34;&gt;4. Rules for Agents&lt;/h2&gt;
-&lt;p&gt;All of the agents have 30 decisions/sec and moves in same speed except human players.
-When the ball bounces, its reflection anngle and speed randomly change, so that its harder for the AI agents. Without continuous random adjustments, Q-Agents can play the game for very long time. It&#39;s designed to test their limits.&lt;/p&gt;
+&lt;p&gt;All types of agents have 30 decisions/sec and moves in same speed except human players.
+When the ball bounces, its reflection angle and speed randomly change, so that its harder for the AI agents. Without continuous random adjustments, Q-Agents can play the game for very long time. It&#39;s designed to test their limits.&lt;/p&gt;
 &lt;h3 id=&#34;51-qlearning-agents-playing-each-other&#34;&gt;5-1 Q-Learning Agents Playing each other&lt;/h3&gt;
 
 &lt;div style=&#34;position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;&#34;&gt;

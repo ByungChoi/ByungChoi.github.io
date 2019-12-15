@@ -475,8 +475,14 @@
 
 
   
+    
+  
 
 
+
+<a class="btn btn-outline-primary my-1 mr-1" href="/project/terrain-gan/TerrainGenerationUsingPGAN.pdf" target="_blank" rel="noopener">
+  PDF
+</a>
 
 
 
@@ -522,7 +528,7 @@
 
     <div class="article-style">
       <h2 id="introduction">Introduction</h2>
-<p>As terrain generation would require a resolution that is higher than 100, DCGAN may not be a good fit for the purpose. This project has adapted Progressive Growing GAN for stable training and generations in a higher resolution.</p>
+<p>As terrain generation would require a resolution that is higher than 100, DCGAN may not be a good fit for the purpose. This project has adapted Progressive Growing GAN for stable training and generations in a higher resolution. For more detail, there's a technical <a href="TerrainGenerationUsingPGAN.pdf">draft</a> available.</p>
 <h2 id="progressive-growing-gan">Progressive Growing GAN</h2>
 <p>Progressive Growing GAN uses He initialization, pixelwise normalization, minibatch standard deviation, equalized learning rate for convolutions, exponential running average, and blending layers with different resolutions. This fading technique helps the network to get stablized. The MNIST dataset was used in early stage to make sure that the network works well as shown in Misc section.</p>
 <h2 id="training">Training</h2>
@@ -624,7 +630,7 @@
 
 <div class="article-tags">
   
-  <a class="badge badge-light" href="/tags/ai/">AI</a>
+  <a class="badge badge-light" href="/tags/deep-learning/">Deep Learning</a>
   
   <a class="badge badge-light" href="/tags/progan/">ProGAN</a>
   
@@ -633,6 +639,8 @@
   <a class="badge badge-light" href="/tags/wgan-gp/">WGAN-GP</a>
   
   <a class="badge badge-light" href="/tags/opengl/">OpenGL</a>
+  
+  <a class="badge badge-light" href="/tags/terrain/">Terrain</a>
   
   <a class="badge badge-light" href="">--</a>
   
@@ -813,9 +821,9 @@
     <h3>Related</h3>
     <ul>
       
-      <li><a href="/project/chessalphazero/">Chess AI using AlphaZero (2020)</a></li>
-      
       <li><a href="/project/dql-atari/">Deep Q-Learning for Atari Games</a></li>
+      
+      <li><a href="/project/chessalphazero/">Chess AI using AlphaZero (2020)</a></li>
       
       <li><a href="/project/q-learning-vr/">Q-Learning Agent in VR</a></li>
       

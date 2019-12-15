@@ -28,7 +28,7 @@
       <pubDate>Sun, 17 Nov 2019 00:00:00 +0000</pubDate>
       <guid>/project/terrain-gan/</guid>
       <description>&lt;h2 id=&#34;introduction&#34;&gt;Introduction&lt;/h2&gt;
-&lt;p&gt;As terrain generation would require a resolution that is higher than 100, DCGAN may not be a good fit for the purpose. This project has adapted Progressive Growing GAN for stable training and generations in a higher resolution.&lt;/p&gt;
+&lt;p&gt;As terrain generation would require a resolution that is higher than 100, DCGAN may not be a good fit for the purpose. This project has adapted Progressive Growing GAN for stable training and generations in a higher resolution. For more detail, there&#39;s a technical &lt;a href=&#34;TerrainGenerationUsingPGAN.pdf&#34;&gt;draft&lt;/a&gt; available.&lt;/p&gt;
 &lt;h2 id=&#34;progressive-growing-gan&#34;&gt;Progressive Growing GAN&lt;/h2&gt;
 &lt;p&gt;Progressive Growing GAN uses He initialization, pixelwise normalization, minibatch standard deviation, equalized learning rate for convolutions, exponential running average, and blending layers with different resolutions. This fading technique helps the network to get stablized. The MNIST dataset was used in early stage to make sure that the network works well as shown in Misc section.&lt;/p&gt;
 &lt;h2 id=&#34;training&#34;&gt;Training&lt;/h2&gt;
