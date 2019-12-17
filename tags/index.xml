@@ -61,6 +61,14 @@
     </item>
     
     <item>
+      <title>AI</title>
+      <link>/tags/ai/</link>
+      <pubDate>Sun, 17 Nov 2019 00:00:00 +0000</pubDate>
+      <guid>/tags/ai/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>GQE</title>
       <link>/tags/gqe/</link>
       <pubDate>Sun, 07 Apr 2019 00:00:00 +0000</pubDate>
@@ -81,14 +89,6 @@
       <link>/tags/query-expansion/</link>
       <pubDate>Sun, 07 Apr 2019 00:00:00 +0000</pubDate>
       <guid>/tags/query-expansion/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>AI</title>
-      <link>/tags/ai/</link>
-      <pubDate>Fri, 01 Feb 2019 00:00:00 +0000</pubDate>
-      <guid>/tags/ai/</guid>
       <description></description>
     </item>
     

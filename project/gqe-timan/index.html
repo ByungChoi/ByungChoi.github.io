@@ -643,8 +643,73 @@ The ideal expansion from training on AP88/89 performs as following:</p>
 </tbody>
 </table>
 <p>Let's use Monte Carlo method to make sure that the quantity matters more than quality; we randomly pick n terms from the ideal expansion term pool that we got from supervised learning, and see how it performs below:</p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>Max Cooc 400</th>
+<th></th>
+<th>Monte Carlo @400</th>
+<th>Monte Carlo @500</th>
+<th>Monte Carlo @600</th>
+<th>Monte Carlo @700</th>
+<th>Monte Carlo @800</th>
+<th>Monte Carlo @900</th>
+<th>Monte Carlo @1000</th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>MAP@100:</td>
+<td>0.556</td>
+<td></td>
+<td>0.568</td>
+<td>0.614</td>
+<td>0.653</td>
+<td>0.682</td>
+<td>0.704</td>
+<td>0.725</td>
+<td>0.742</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p>Max Cooc is using 400 expansion terms which come from maximized term co-occurence probability; this is no better than QE with 400 randomly picked expansion terms from ideal expansion pool as shown in Monte Carlo@400 method. As random picks are better than the co-occurence proability maximization method, it's better to focus on finding terms quantitatively.</p>
 <h2 id="recent-work">Recent Work</h2>
 <p>The idea of finding top 100 ideal expansion is not the right direction as we found that 400 ideal expansion terms were at its local maxima for its performance. The quantity of expansion term mattered more than the quality, where the quality is high when the ideal expansion terms maximizes the co-occurrence probability of the expansion terms.</p>
+<p>GQE seems to capture a lot of ideal expansion terms:</p>
+<table>
+<thead>
+<tr>
+<th>GQE first n-terms</th>
+<th>0-50</th>
+<th>0-100</th>
+<th>0-200</th>
+<th>0-300</th>
+<th>0-400</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Avg ideal terms found</td>
+<td>41</td>
+<td>82</td>
+<td>161</td>
+<td>236</td>
+<td>304</td>
+</tr>
+<tr>
+<td>Average Precision</td>
+<td>0.82</td>
+<td>0.82</td>
+<td>0.805</td>
+<td>07867</td>
+<td>0.76</td>
+</tr>
+</tbody>
+</table>
+<p>The average precision of finding these ideal expansion terms with GQE is quiet high, but it's error is not low enough yet.</p>
 <h2 id="acknowledgement">Acknowledgement</h2>
 <p>This project is advised by Prof. <a href="http://czhai.cs.illinois.edu">Cheng Xiang Zhai</a></p>
 <section class="footnotes" role="doc-endnotes">
