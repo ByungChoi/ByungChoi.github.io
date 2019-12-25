@@ -700,7 +700,7 @@ The ideal expansion from training on AP88/89 performs as following:</p>
 <td>304</td>
 </tr>
 <tr>
-<td>Average Precision</td>
+<td>Precision</td>
 <td>0.82</td>
 <td>0.82</td>
 <td>0.805</td>
@@ -709,7 +709,49 @@ The ideal expansion from training on AP88/89 performs as following:</p>
 </tr>
 </tbody>
 </table>
-<p>The average precision of finding these ideal expansion terms with GQE is quiet high, but it's error is not low enough yet.</p>
+<p>The precision of finding these ideal expansion terms with GQE is quite high, but its error is not low enough yet. But, with appropriate terms injected, GQE's extension can be useful. In the first feedback loop, we get enough positive terms that can lower the error rates of GQE. With one feedback and GQE expansion, the search results improves as below:</p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>No GQE</th>
+<th>GQE+50</th>
+<th>GQE+100</th>
+<th>GQE+150</th>
+<th>GQE+200</th>
+<th>GQE+250</th>
+<th>GQE+300</th>
+<th>GQE+350</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>p@5</td>
+<td>0.41</td>
+<td>0.496</td>
+<td>0.506</td>
+<td>0.516</td>
+<td>0.522</td>
+<td>0.526</td>
+<td><strong>0.534</strong></td>
+<td>0.514</td>
+</tr>
+<tr>
+<td>p@10</td>
+<td>0.371</td>
+<td>0.391</td>
+<td>0.404</td>
+<td>0.411</td>
+<td>0.417</td>
+<td><strong>0.428</strong></td>
+<td>0.42</td>
+<td>0.415</td>
+</tr>
+</tbody>
+</table>
+<p>GQE+n is for queries expanded with n-GQE terms and 1 feedback. The injection of true positive terms from a feedback helps to reduce GQE's error rate, and improves the search performance.</p>
+<h2 id="conclusion">Conclusion</h2>
+<p>So far, we've found that GQE captures a great portion of ideal expansion terms and is useful when it's used with the first feedback. If we find a way to increase the precision of finding GQE candidates(ie. filter out false positive terms), then the query expansion will improve even more as GQE's candidate terms are becoming closer to ideal expansion terms.</p>
 <h2 id="acknowledgement">Acknowledgement</h2>
 <p>This project is advised by Prof. <a href="http://czhai.cs.illinois.edu">Cheng Xiang Zhai</a></p>
 <section class="footnotes" role="doc-endnotes">
