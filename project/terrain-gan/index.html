@@ -28,7 +28,7 @@
   
     
   
-  <meta name="description" content="An example of using the in-built project page.">
+  <meta name="description" content="Terrain Generation using Progressive Growing GAN">
 
   
   <link rel="alternate" hreflang="en-us" href="/project/terrain-gan/">
@@ -114,7 +114,7 @@
   <meta property="og:site_name" content="byung.org">
   <meta property="og:url" content="/project/terrain-gan/">
   <meta property="og:title" content="Terrain Generation with GAN | byung.org">
-  <meta property="og:description" content="An example of using the in-built project page."><meta property="og:image" content="/project/terrain-gan/featured.jpg">
+  <meta property="og:description" content="Terrain Generation using Progressive Growing GAN"><meta property="og:image" content="/project/terrain-gan/featured.jpg">
   <meta property="twitter:image" content="/project/terrain-gan/featured.jpg"><meta property="og:locale" content="en-us">
   
     
@@ -168,7 +168,7 @@
       "url": "/img/icon-512.png"
     }
   },
-  "description": "An example of using the in-built project page."
+  "description": "Terrain Generation using Progressive Growing GAN"
 }
 </script>
 
@@ -331,6 +331,28 @@
 
         <li class="nav-item">
           <a class="nav-link " href="/#publications"><span>Research</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+        
+        
+        
+        
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/post"><span>Posts</span></a>
         </li>
 
         
@@ -530,7 +552,7 @@
       <h2 id="introduction">Introduction</h2>
 <p>As terrain generation would require a resolution that is higher than 100, DCGAN may not be a good fit for the purpose. This project has adapted Progressive Growing GAN for stable training and generations in a higher resolution. For more detail, there's a technical <a href="TerrainGenerationUsingPGAN.pdf">draft</a> available.</p>
 <h2 id="progressive-growing-gan">Progressive Growing GAN</h2>
-<p>Progressive Growing GAN uses He initialization, pixelwise normalization, minibatch standard deviation, equalized learning rate for convolutions, exponential running average, and blending layers with different resolutions. This fading technique helps the network to get stablized. The MNIST dataset was used in early stage to make sure that the network works well as shown in Misc section.</p>
+<p>Progressive Growing GAN uses He initialization, pixelwise normalization, minibatch standard deviation, equalized learning rate for convolutions, exponential running average, and blending layers with different resolutions. This fading technique helps the network to get stablized. The <a href="/post/mnist-progan/">MNIST</a> dataset was used in early stage to make sure that the network works well as shown in Misc section.</p>
 <h2 id="training">Training</h2>
 <p>The neural network was trained on the topology data and surface color from NASA's <a href="https://visibleearth.nasa.gov">Visible Earth</a>.</p>
 <p>The training process combines the colors of the earth's surface and it's topology, which enables the network to generate both colors and heights of a terrain like below:</p>
@@ -602,7 +624,7 @@
 
 <p>The generations from fixed random latent vectors were tracked, and their training progress in 3D representations were captured as below:</p>
 <h3 id="32-training-visualization-in-3d">3.2 Training Visualization in 3D</h3>
-<p>We can see how the GAN is combining various features in the visualization, which we cannot see in the visualization of 2D.</p>
+<p>We can see how the GAN is combining various features in the visualization, which we cannot see in the 2D visualization.</p>
 
 <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
   <iframe src="https://www.youtube.com/embed/rCjdObI5iFU" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" allowfullscreen title="YouTube Video"></iframe>
@@ -825,13 +847,13 @@
       
       <li><a href="/project/dql-atari/">Deep Q-Learning for Atari Games</a></li>
       
+      <li><a href="/post/mnist-progan/">ProGAN on Generating Digits from MNIST</a></li>
+      
       <li><a href="/project/chessalphazero/">Chess AI using AlphaZero (2020)</a></li>
       
       <li><a href="/project/q-learning-vr/">Q-Learning Agent in VR</a></li>
       
       <li><a href="/project/gqe-timan/">Generative Query Expansion</a></li>
-      
-      <li><a href="/project/mandelbrotcuda/">Realtime Fractal Zooming with CUDA</a></li>
       
     </ul>
   </div>

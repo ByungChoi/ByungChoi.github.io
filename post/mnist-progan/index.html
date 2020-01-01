@@ -28,10 +28,10 @@
   
     
   
-  <meta name="description" content="">
+  <meta name="description" content="Generating digits works well, model is trained from MNIST dataset">
 
   
-  <link rel="alternate" hreflang="en-us" href="/tags/gqe/">
+  <link rel="alternate" hreflang="en-us" href="/post/mnist-progan/">
 
   
 
@@ -95,49 +95,100 @@
 
 
   
-  <link rel="alternate" href="/tags/gqe/index.xml" type="application/rss+xml" title="byung.org">
-  
 
   <link rel="manifest" href="/index.webmanifest">
   <link rel="icon" type="image/png" href="/img/icon-32.png">
   <link rel="apple-touch-icon" type="image/png" href="/img/icon-192.png">
 
-  <link rel="canonical" href="/tags/gqe/">
+  <link rel="canonical" href="/post/mnist-progan/">
 
   
   
   
   
     
-    
   
   
-  <meta property="twitter:card" content="summary">
+  <meta property="twitter:card" content="summary_large_image">
   
   <meta property="og:site_name" content="byung.org">
-  <meta property="og:url" content="/tags/gqe/">
-  <meta property="og:title" content="GQE | byung.org">
-  <meta property="og:description" content=""><meta property="og:image" content="/img/icon-192.png">
-  <meta property="twitter:image" content="/img/icon-192.png"><meta property="og:locale" content="en-us">
+  <meta property="og:url" content="/post/mnist-progan/">
+  <meta property="og:title" content="ProGAN on Generating Digits from MNIST | byung.org">
+  <meta property="og:description" content="Generating digits works well, model is trained from MNIST dataset"><meta property="og:image" content="/post/mnist-progan/featured.png">
+  <meta property="twitter:image" content="/post/mnist-progan/featured.png"><meta property="og:locale" content="en-us">
   
-    <meta property="og:updated_time" content="2019-04-07T00:00:00&#43;00:00">
+    
+      <meta property="article:published_time" content="2019-11-08T00:00:00&#43;00:00">
+    
+    <meta property="article:modified_time" content="2019-11-08T00:00:00&#43;00:00">
   
-
-  
-
-
-
 
   
 
 
+    
+
+
+
+
+
+
   
 
 
 
 
 
-  <title>GQE | byung.org</title>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "/post/mnist-progan/"
+  },
+  "headline": "ProGAN on Generating Digits from MNIST",
+  
+  "image": [
+    "/post/mnist-progan/featured.png"
+  ],
+  
+  "datePublished": "2019-11-08T00:00:00Z",
+  "dateModified": "2019-11-08T00:00:00Z",
+  
+  "author": {
+    "@type": "Person",
+    "name": "Byung Il Choi"
+  },
+  
+  "publisher": {
+    "@type": "Organization",
+    "name": "byung.org",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "/img/icon-512.png"
+    }
+  },
+  "description": "Generating digits works well, model is trained from MNIST dataset"
+}
+</script>
+
+  
+
+  
+
+
+  
+
+
+  
+
+
+
+
+
+  <title>ProGAN on Generating Digits from MNIST | byung.org</title>
 
 </head>
 
@@ -303,7 +354,7 @@
         
 
         <li class="nav-item">
-          <a class="nav-link " href="/post"><span>Posts</span></a>
+          <a class="nav-link  active" href="/post"><span>Posts</span></a>
         </li>
 
         
@@ -365,6 +416,122 @@
 </nav>
 
 
+  <article class="article">
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+  
+  
+<div class="article-container pt-3">
+  <h1>ProGAN on Generating Digits from MNIST</h1>
+
+  
+  <p class="page-subtitle">Generating digits works well</p>
+  
+
+  
+    
+
+
+<div class="article-metadata">
+
+  
+  
+  
+  
+  <div>
+    
+
+
+
+  
+  <span><a href="/authors/admin/">Byung Il Choi</a></span>
+
+  </div>
+  
+  
+
+  
+  <span class="article-date">
+    
+    
+      
+    
+    Nov 8, 2019
+  </span>
+  
+
+  
+
+  
+  <span class="middot-divider"></span>
+  <span class="article-reading-time">
+    1 min read
+  </span>
+  
+
+  
+  
+  
+
+  
+  
+
+</div>
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="btn-links mb-3">
+  
+  
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+  
+  <a class="btn btn-outline-primary my-1 mr-1" href="/project/terrain-gan/">
+    Project
+  </a>
   
 
 
@@ -377,42 +544,227 @@
 
 
 
+</div>
+
 
   
+</div>
+
+
+
+  <div class="article-container">
+
+    <div class="article-style">
+      <p>While building and testing a progressive growing GAN, I was able to train the network with the MNIST dataset. The results looks good and the training visualization shows how Progressive Growing GAN uses multiple layers to increase the resolution as below:</p>
+
+<div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
+  <iframe src="https://www.youtube.com/embed/MlkW60qwY_Y" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" allowfullscreen title="YouTube Video"></iframe>
+</div>
+
+<h2 id="acknowledgement">Acknowledgement</h2>
+<ul>
+<li>MNIST Dataset is from <a href="http://yann.lecun.com/exdb/mnist/">http://yann.lecun.com/exdb/mnist/</a></li>
+<li>Progressive Growing GAN is implemented using <a href="http://yann.lecun.com/exdb/mnist/">PyTorch</a>.</li>
+</ul>
+
+    </div>
+
+    
+
+
+
+
+
+<div class="article-tags">
+  
+  <a class="badge badge-light" href="/tags/gan/">GAN</a>
+  
+  <a class="badge badge-light" href="/tags/progan/">ProGAN</a>
+  
+  <a class="badge badge-light" href="/tags/mnist/">MNIST</a>
+  
+</div>
+
+
+
+<div class="share-box" aria-hidden="true">
+  <ul class="share">
+    
+      
+      
+      
+        
+      
+      
+      
+      <li>
+        <a href="https://twitter.com/intent/tweet?url=/post/mnist-progan/&amp;text=ProGAN%20on%20Generating%20Digits%20from%20MNIST" target="_blank" rel="noopener" class="share-btn-twitter">
+          <i class="fab fa-twitter"></i>
+        </a>
+      </li>
+    
+      
+      
+      
+        
+      
+      
+      
+      <li>
+        <a href="https://www.facebook.com/sharer.php?u=/post/mnist-progan/&amp;t=ProGAN%20on%20Generating%20Digits%20from%20MNIST" target="_blank" rel="noopener" class="share-btn-facebook">
+          <i class="fab fa-facebook"></i>
+        </a>
+      </li>
+    
+      
+      
+      
+        
+      
+      
+      
+      <li>
+        <a href="mailto:?subject=ProGAN%20on%20Generating%20Digits%20from%20MNIST&amp;body=/post/mnist-progan/" target="_blank" rel="noopener" class="share-btn-email">
+          <i class="fas fa-envelope"></i>
+        </a>
+      </li>
+    
+      
+      
+      
+        
+      
+      
+      
+      <li>
+        <a href="https://www.linkedin.com/shareArticle?url=/post/mnist-progan/&amp;title=ProGAN%20on%20Generating%20Digits%20from%20MNIST" target="_blank" rel="noopener" class="share-btn-linkedin">
+          <i class="fab fa-linkedin-in"></i>
+        </a>
+      </li>
+    
+      
+      
+      
+        
+      
+      
+      
+      <li>
+        <a href="https://web.whatsapp.com/send?text=ProGAN%20on%20Generating%20Digits%20from%20MNIST%20/post/mnist-progan/" target="_blank" rel="noopener" class="share-btn-whatsapp">
+          <i class="fab fa-whatsapp"></i>
+        </a>
+      </li>
+    
+      
+      
+      
+        
+      
+      
+      
+      <li>
+        <a href="https://service.weibo.com/share/share.php?url=/post/mnist-progan/&amp;title=ProGAN%20on%20Generating%20Digits%20from%20MNIST" target="_blank" rel="noopener" class="share-btn-weibo">
+          <i class="fab fa-weibo"></i>
+        </a>
+      </li>
+    
+  </ul>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    
+  
+  
+
+
+
+
+
 
   
   
   
     
   
-<div class="universal-wrapper pt-3">
-  <h1>GQE</h1>
-
   
-
-  
-</div>
-
-
-
-<div class="universal-wrapper">
-  
-
-  
-  
-  <div>
-    <h2><a href="/publication/gqe_timan/">Generative Query Expansion, Stochastic Approach with Quantitative Analysis</a></h2>
-    <div class="article-style">
+  <div class="media author-card content-widget-hr">
+    
       
-      Generative Query Expansion
+      <img class="portrait mr-3" src="/authors/admin/avatar_hu7da3a501a2c3854e406b6e815811431a_5896_250x250_fill_q90_lanczos_center.jpg" alt="Avatar">
+    
+
+    <div class="media-body">
+      <h5 class="card-title"><a href="/">Byung Il Choi</a></h5>
       
+      <p class="card-text">My research interests include Deep Learning, Information Retreival, and Computer Graphics.</p>
+      <ul class="network-icon" aria-hidden="true">
+  
+    
+    
+    
+      
+    
+    
+    
+    
+    
+      
+    
+    <li>
+      <a href="/#contact" >
+        <i class="fas fa-envelope"></i>
+      </a>
+    </li>
+  
+    
+    
+    
+      
+    
+    
+    
+    
+    
+      
+    
+    <li>
+      <a href="https://twitter.com/ByungCh0i" target="_blank" rel="noopener">
+        <i class="fab fa-twitter"></i>
+      </a>
+    </li>
+  
+</ul>
+
     </div>
   </div>
-  
+
+
+
+
+
+
+
+
 
   
+  
 
-</div>
+
+
+  </div>
+</article>
 
       
 
