@@ -5,7 +5,7 @@
     <link>/</link>
       <atom:link href="/index.xml" rel="self" type="application/rss+xml" />
     <description>byung.org</description>
-    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>some copyrights; (2015)</copyright><lastBuildDate>Sun, 01 Dec 2019 00:00:00 +0000</lastBuildDate>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© 2019-2020 Byung Il Choi</copyright><lastBuildDate>Sun, 01 Dec 2019 00:00:00 +0000</lastBuildDate>
     <image>
       <url>/img/icon-192.png</url>
       <title>byung.org</title>
@@ -210,14 +210,14 @@ continuous sequences of data can be recorded to become a large pool, which can b
 &lt;h2 id=&#34;4-rules-for-agents&#34;&gt;4. Rules for Agents&lt;/h2&gt;
 &lt;p&gt;All types of agents have 30 decisions/sec and moves in same speed except human players.
 When the ball bounces, its reflection angle and speed randomly change, so that its harder for the AI agents. Without continuous random adjustments, Q-Agents can play the game for very long time. It&#39;s designed to test their limits.&lt;/p&gt;
-&lt;h3 id=&#34;51-qlearning-agents-playing-each-other&#34;&gt;5-1 Q-Learning Agents Playing each other&lt;/h3&gt;
+&lt;h3 id=&#34;5-1-q-learning-agents-playing-each-other&#34;&gt;5-1 Q-Learning Agents Playing each other&lt;/h3&gt;
 
 &lt;div style=&#34;position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;&#34;&gt;
   &lt;iframe src=&#34;https://www.youtube.com/embed/3fCz_Gp1MB4&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;&#34; allowfullscreen title=&#34;YouTube Video&#34;&gt;&lt;/iframe&gt;
 &lt;/div&gt;
 
 &lt;p&gt;Most of the mistakes are by movements that are off by an inch. The high ball speed can reduce the game time effectively.&lt;/p&gt;
-&lt;h3 id=&#34;52-qagent-vs-greedy-agent&#34;&gt;5-2 Q-Agent vs Greedy Agent&lt;/h3&gt;
+&lt;h3 id=&#34;5-2-q-agent-vs-greedy-agent&#34;&gt;5-2 Q-Agent vs Greedy Agent&lt;/h3&gt;
 
 &lt;div style=&#34;position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;&#34;&gt;
   &lt;iframe src=&#34;https://www.youtube.com/embed/-JLkZ-1K8n4&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;&#34; allowfullscreen title=&#34;YouTube Video&#34;&gt;&lt;/iframe&gt;
@@ -241,7 +241,7 @@ When the ball bounces, its reflection angle and speed randomly change, so that i
       <pubDate>Wed, 15 Nov 2017 00:00:00 +0000</pubDate>
       <guid>/project/gqe-timan/</guid>
       <description>&lt;h2 id=&#34;introduction&#34;&gt;Introduction&lt;/h2&gt;
-&lt;p&gt;In many query expansion studies, the primary evaluation depends on its search result. This project tries to provide a second way&lt;sup id=&#34;fnref:1&#34;&gt;&lt;a href=&#34;#fn:1&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;1&lt;/a&gt;&lt;/sup&gt; of measuring QE performance by measuring how many query expansion terms overlaps with ideal expansion terms, where ideal expansion terms are trained from a high performing QE from supervised learning.&lt;/p&gt;
+&lt;p&gt;In many query expansion studies, the primary evaluation depends on its search result. This project tries to provide a second way&lt;sup id=&#34;fnref:1&#34;&gt;&lt;a href=&#34;#fn:1&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;1&lt;/a&gt;&lt;/sup&gt; of measuring QE performance by measuring how many query expansion terms overlaps with ideal expansion terms, where ideal expansion terms are trained from a high performing QE from supervised learning. After expansion, we used Okapi BM25 for ranking(searching).&lt;/p&gt;
 &lt;h2 id=&#34;approaches&#34;&gt;Approaches&lt;/h2&gt;
 &lt;p&gt;(i) Try to find expansion cadidates using GQE model which tries find the terms that maximizes the probability of coocurrening terms.&lt;br&gt;
 (ii) Try to see if maximizing probabilities of coocurring terms is the right way&lt;br&gt;
@@ -407,6 +407,7 @@ The ideal expansion from training on AP88/89 performs as following:&lt;/p&gt;
 &lt;th&gt;0-200&lt;/th&gt;
 &lt;th&gt;0-300&lt;/th&gt;
 &lt;th&gt;0-400&lt;/th&gt;
+&lt;th&gt;0-Max&lt;/th&gt;
 &lt;/tr&gt;
 &lt;/thead&gt;
 &lt;tbody&gt;
@@ -417,6 +418,7 @@ The ideal expansion from training on AP88/89 performs as following:&lt;/p&gt;
 &lt;td&gt;161&lt;/td&gt;
 &lt;td&gt;236&lt;/td&gt;
 &lt;td&gt;304&lt;/td&gt;
+&lt;td&gt;1156&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td&gt;Precision&lt;/td&gt;
@@ -425,6 +427,7 @@ The ideal expansion from training on AP88/89 performs as following:&lt;/p&gt;
 &lt;td&gt;0.805&lt;/td&gt;
 &lt;td&gt;07867&lt;/td&gt;
 &lt;td&gt;0.76&lt;/td&gt;
+&lt;td&gt;n/a&lt;/td&gt;
 &lt;/tr&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;
@@ -477,7 +480,7 @@ The ideal expansion from training on AP88/89 performs as following:&lt;/p&gt;
 &lt;hr&gt;
 &lt;ol&gt;
 &lt;li id=&#34;fn:1&#34; role=&#34;doc-endnote&#34;&gt;
-&lt;p&gt;This project is currently under progress.&lt;/p&gt;
+&lt;p&gt;This project is currently under progress. &lt;a href=&#34;#fnref:1&#34; class=&#34;footnote-backref&#34; role=&#34;doc-backlink&#34;&gt;&amp;#x21a9;&amp;#xfe0e;&lt;/a&gt;&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ol&gt;
 &lt;/section&gt;
@@ -554,7 +557,7 @@ The ideal expansion from training on AP88/89 performs as following:&lt;/p&gt;
 &lt;/figure&gt;
 
 &lt;p&gt;The left shows a kernel with 49x1024 threads, which boosts about 333 times compared to the base model. With proper thread-block dimension, 15% more improvement can be acheived.&lt;/p&gt;
-&lt;h2 id=&#34;3-nstream-rendering&#34;&gt;3. n-stream rendering&lt;/h2&gt;
+&lt;h2 id=&#34;3-n-stream-rendering&#34;&gt;3. n-stream rendering&lt;/h2&gt;
 &lt;p&gt;The above kernel in section 2 renders about 42 pixels per thread &lt;sup id=&#34;fnref:2&#34;&gt;&lt;a href=&#34;#fn:2&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;2&lt;/a&gt;&lt;/sup&gt;, where each thread&#39;s memory access will be about 168 bytes apart with no global memory access. Even for writing, it is better to coalesce the memory access for a better cache use. Instead of reindexing the writing process, changing the calculation level to per-pixel base can help for speeding up the calculation with a parallelization. Using 42 streams with 376x128 threads can speed up even more as below:&lt;/p&gt;
 
 
@@ -600,10 +603,10 @@ The ideal expansion from training on AP88/89 performs as following:&lt;/p&gt;
 &lt;hr&gt;
 &lt;ol&gt;
 &lt;li id=&#34;fn:1&#34; role=&#34;doc-endnote&#34;&gt;
-&lt;p&gt;using AMD 8300 in 2015&lt;/p&gt;
+&lt;p&gt;using AMD 8300 in 2015 &lt;a href=&#34;#fnref:1&#34; class=&#34;footnote-backref&#34; role=&#34;doc-backlink&#34;&gt;&amp;#x21a9;&amp;#xfe0e;&lt;/a&gt;&lt;/p&gt;
 &lt;/li&gt;
 &lt;li id=&#34;fn:2&#34; role=&#34;doc-endnote&#34;&gt;
-&lt;p&gt;using Nvidia 780 gtx&lt;/p&gt;
+&lt;p&gt;using Nvidia 780 gtx &lt;a href=&#34;#fnref:2&#34; class=&#34;footnote-backref&#34; role=&#34;doc-backlink&#34;&gt;&amp;#x21a9;&amp;#xfe0e;&lt;/a&gt;&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ol&gt;
 &lt;/section&gt;
@@ -613,13 +616,13 @@ The ideal expansion from training on AP88/89 performs as following:&lt;/p&gt;
     <item>
       <title>Etc</title>
       <link>/project/etc/</link>
-      <pubDate>Tue, 27 Jan 1981 00:00:00 +0000</pubDate>
+      <pubDate>Wed, 27 Jan 2010 00:00:00 +0000</pubDate>
       <guid>/project/etc/</guid>
-      <description>&lt;h3 id=&#34;2009-finger-touch-tracking&#34;&gt;2009 Finger Touch Tracking,&lt;/h3&gt;
+      <description>&lt;h3 id=&#34;2009-finger-touch-tracking&#34;&gt;2009 Finger Touch Tracking&lt;/h3&gt;
 &lt;p&gt;R&amp;amp;D: Worked on a project for finger tracking with Bezier Forward Difference&lt;/p&gt;
 &lt;h3 id=&#34;2008-adjustable-game-probabilities-with-constraints&#34;&gt;2008 Adjustable Game Probabilities with Constraints&lt;/h3&gt;
 &lt;p&gt;R&amp;amp;D: Worked on adjustable game probability in Impression Co.&lt;/p&gt;
-&lt;h3 id=&#34;2006-camera-work-and-shader-coputation&#34;&gt;2006 Camera Work and Shader Coputation&lt;/h3&gt;
+&lt;h3 id=&#34;2006-camera-work-and-shader-computation&#34;&gt;2006 Camera Work and Shader Computation&lt;/h3&gt;
 &lt;p&gt;R&amp;amp;D: Worked on Camera Work related to curve tracking and Shader Computation&lt;/p&gt;
 &lt;h3 id=&#34;2003-scene-graph-library-maya-plugin&#34;&gt;2003 Scene Graph Library, Maya Plugin&lt;/h3&gt;
 &lt;p&gt;R&amp;amp;D: Worked on building scene graph library and related Maya Plugins in Cenozoic Co.&lt;/p&gt;

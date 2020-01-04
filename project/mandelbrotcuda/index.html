@@ -623,7 +623,7 @@
 </figure>
 
 <p>The left shows a kernel with 49x1024 threads, which boosts about 333 times compared to the base model. With proper thread-block dimension, 15% more improvement can be acheived.</p>
-<h2 id="3-nstream-rendering">3. n-stream rendering</h2>
+<h2 id="3-n-stream-rendering">3. n-stream rendering</h2>
 <p>The above kernel in section 2 renders about 42 pixels per thread <sup id="fnref:2"><a href="#fn:2" class="footnote-ref" role="doc-noteref">2</a></sup>, where each thread's memory access will be about 168 bytes apart with no global memory access. Even for writing, it is better to coalesce the memory access for a better cache use. Instead of reindexing the writing process, changing the calculation level to per-pixel base can help for speeding up the calculation with a parallelization. Using 42 streams with 376x128 threads can speed up even more as below:</p>
 
 
@@ -669,10 +669,10 @@
 <hr>
 <ol>
 <li id="fn:1" role="doc-endnote">
-<p>using AMD 8300 in 2015</p>
+<p>using AMD 8300 in 2015 <a href="#fnref:1" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
 </li>
 <li id="fn:2" role="doc-endnote">
-<p>using Nvidia 780 gtx</p>
+<p>using Nvidia 780 gtx <a href="#fnref:2" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
 </li>
 </ol>
 </section>
@@ -1016,7 +1016,7 @@
   
 
   <p class="powered-by">
-    some copyrights; (2015) &middot; 
+    © 2019-2020 Byung Il Choi &middot; 
 
     Powered by the
     <a href="https://sourcethemes.com/academic/" target="_blank" rel="noopener">Academic theme</a> for
