@@ -5,12 +5,21 @@
     <link>/</link>
       <atom:link href="/index.xml" rel="self" type="application/rss+xml" />
     <description>byung.org</description>
-    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© 2019-2020 Byung Il Choi</copyright><lastBuildDate>Sun, 01 Dec 2019 00:00:00 +0000</lastBuildDate>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© 2019-2020 Byung Il Choi</copyright><lastBuildDate>Tue, 15 Sep 2020 00:00:00 +0000</lastBuildDate>
     <image>
       <url>/img/icon-192.png</url>
       <title>byung.org</title>
       <link>/</link>
     </image>
+    
+    <item>
+      <title>GOAT</title>
+      <link>/project/goat/</link>
+      <pubDate>Tue, 15 Sep 2020 00:00:00 +0000</pubDate>
+      <guid>/project/goat/</guid>
+      <description>&lt;p&gt;GOAT is under development.&lt;/p&gt;
+</description>
+    </item>
     
     <item>
       <title>Progressive Growing GAN for Terrain Generation</title>
@@ -148,15 +157,6 @@
       <guid>/publication/gqe_timan/</guid>
       <description>&lt;!-- raw HTML omitted --&gt;
 &lt;p&gt;Currently In Progress&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>Chess AI using AlphaZero (2020)</title>
-      <link>/project/chessalphazero/</link>
-      <pubDate>Fri, 01 Feb 2019 00:00:00 +0000</pubDate>
-      <guid>/project/chessalphazero/</guid>
-      <description>&lt;p&gt;The project is in a very early stage.&lt;/p&gt;
 </description>
     </item>
     

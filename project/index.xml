@@ -5,12 +5,21 @@
     <link>/project/</link>
       <atom:link href="/project/index.xml" rel="self" type="application/rss+xml" />
     <description>Projects</description>
-    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© 2019-2020 Byung Il Choi</copyright><lastBuildDate>Sun, 17 Nov 2019 00:00:00 +0000</lastBuildDate>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© 2019-2020 Byung Il Choi</copyright><lastBuildDate>Tue, 15 Sep 2020 00:00:00 +0000</lastBuildDate>
     <image>
       <url>/img/icon-192.png</url>
       <title>Projects</title>
       <link>/project/</link>
     </image>
+    
+    <item>
+      <title>GOAT</title>
+      <link>/project/goat/</link>
+      <pubDate>Tue, 15 Sep 2020 00:00:00 +0000</pubDate>
+      <guid>/project/goat/</guid>
+      <description>&lt;p&gt;GOAT is under development.&lt;/p&gt;
+</description>
+    </item>
     
     <item>
       <title>Terrain Generation with GAN</title>
@@ -109,15 +118,6 @@
 &lt;p&gt;This research project was advised by Prof. &lt;a href=&#34;https://cs.illinois.edu/directory/profile/shaffer1&#34;&gt;Eric Shaffer&lt;/a&gt;.&lt;/p&gt;
 &lt;h2 id=&#34;misc&#34;&gt;Misc.&lt;/h2&gt;
 &lt;p&gt;MNIST digits generation using Progressive Growing GAN&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>Chess AI using AlphaZero (2020)</title>
-      <link>/project/chessalphazero/</link>
-      <pubDate>Fri, 01 Feb 2019 00:00:00 +0000</pubDate>
-      <guid>/project/chessalphazero/</guid>
-      <description>&lt;p&gt;The project is in a very early stage.&lt;/p&gt;
 </description>
     </item>
     
