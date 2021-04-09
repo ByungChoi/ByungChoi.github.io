@@ -22,11 +22,11 @@
 &lt;h2 id=&#34;preview&#34;&gt;Preview&lt;/h2&gt;
 
 &lt;div style=&#34;position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;&#34;&gt;
-  &lt;iframe src=&#34;https://www.youtube.com/embed/aJBTy471AUo&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;&#34; allowfullscreen title=&#34;YouTube Video&#34;&gt;&lt;/iframe&gt;
+  &lt;iframe src=&#34;https://www.youtube.com/embed/FZGKFZ6hDxs&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;&#34; allowfullscreen title=&#34;YouTube Video&#34;&gt;&lt;/iframe&gt;
 &lt;/div&gt;
 
 &lt;h2 id=&#34;progress&#34;&gt;Progress&lt;/h2&gt;
-&lt;p&gt;GOAT.futbol is currently under development by &lt;a href=&#34;https://tict.ai&#34;&gt;TicT LLC&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://goat.futbol&#34;&gt;GOAT.futbol&lt;/a&gt; is currently under development by &lt;a href=&#34;https://tict.ai&#34;&gt;TicT LLC&lt;/a&gt;.&lt;/p&gt;
 </description>
     </item>
     
@@ -241,24 +241,6 @@ When the ball bounces, its reflection angle and speed randomly change, so that i
 &lt;li&gt;User Interface and Graphic Design by Chris Wegenek&lt;/li&gt;
 &lt;li&gt;Sound and Testing by Alejandro Marin&lt;/li&gt;
 &lt;/ul&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>Privacy Policy</title>
-      <link>/privacy/</link>
-      <pubDate>Thu, 28 Jun 2018 00:00:00 +0100</pubDate>
-      <guid>/privacy/</guid>
-      <description>&lt;p&gt;Add your privacy policy here and set &lt;code&gt;draft: false&lt;/code&gt; to publish it. Otherwise, delete this file if you don&#39;t need it.&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>Terms</title>
-      <link>/terms/</link>
-      <pubDate>Thu, 28 Jun 2018 00:00:00 +0100</pubDate>
-      <guid>/terms/</guid>
-      <description>&lt;p&gt;Add your terms here and set &lt;code&gt;draft: false&lt;/code&gt; to publish it. Otherwise, delete this file if you don&#39;t need it.&lt;/p&gt;
 </description>
     </item>
     
