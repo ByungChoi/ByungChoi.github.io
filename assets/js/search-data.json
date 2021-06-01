@@ -4,8 +4,8 @@
         "post0": {
             "title": "Blogging 하기.",
             "content": "1. &#46041;&#44592; . 학습이 누적되고 작업방향에 따라 일부 경험이 점점 잊혀지는 것 같아, 공유를 통해 새로운 가치를 만들고 기록도 남겨 일석이조 하고자 함. 그러기 위해 내 컴퓨팅 경험을 남길 수 있는 블로깅이 적합해 보인다. . 2. &#54788;&#49345;&#54889; . 그간 개인적 기록을 org-mode에 담아 두었지만: . 사적인 노트가 너무 많아 일괄적 변환이 적합하지 않다. | static webpages로 변환하는 것에 나의 orgs를 선별하는건 추가 작업. | 문서/노트의 공과 사를 확실히 구분하고 싶다.(공개여부) | 그렇지만 &quot;바퀴를 재발명 하지 말자.&quot; 그냥 orgmode는 그 기능을 하게두고, 블로깅은 공유와 경험 환기/창조란 목적하에 분리한다. . 3. &#50896;&#54616;&#45716; &#44163;&#46308; . 비용 효율적인 운용 | 안정적인 운용 | Jupyter Notebook의 자동변환 | Markdown 혹은 orgmode와 같은 간결함 | latex 지원 | static webpages 선호 | backlinks | 항목 1과 2이면 github이고, 항목 3,4,5,6 이면 fastpages 이다. 단 미적-가치 혹은 원하던 타이포그라피의 품질은 비교적 떨어진다. 그래도 추구하는 미니멀리즘이 취향에 맞는다. 아쉽게도 backlinks를 지원하는 것을 찾진 못했다. . 4. Workflow . Jupyter Notebook은 어느 정도 WYSIWYG(aka 보이는 데로 출력)이고 데이터와 그래프 연동을 지원하기에 항목 3,4,5를 다 충족시켜준다. Jekyll로 빌드된 것을 올리면 됨으로, Github의 자동 변환을 사용하진 않을 듯 하다. . fastpages가 알아서 노트북 변환을 해주니, 사용자가 빌드만 하면 끝인 셈이니 편리한 편이다. _notebooks 디렉토리 안에 노트를 업데이트 하면 자동으로 그 변경사항을 확인 할 수 있다. . 내가 사용하고자 하는 방법은: . &#39;make server&#39;로 개인 컴퓨터에 fastpages를 돌림 | (a) Jupyterlab을 _notebooks에 실행시킨 후 그곳에서 편집을 한다. | (b) 다른 곳에서 노트북 편집후 위의 경로로 복사. | . a 혹은 b 둘 다 편집이 쉬운 편이 될듯하다. colab이나 기타 클러스터에서 계산하는 경우 때문에 b의 방식을 배제할 순 없다. . 5. &#51109;&#51216;/&#45800;&#51216; . 5.1 &#51109;&#51216; . 아직 글을 좀더 적지 않아 모르지만, 일단: . 익숙한 환경이다. | 원하는것(섹션 3)들을 대부분 충족 | 문서 변환1에 관하여 신경 쓸 필요 없음 | 댓글을 Github에 utterances를 통해 issue 형태2로 저장 가능하다. | 5.2 &#45800;&#51216; . footnote이 생각보다 불편하다. | backlinks의 부재 | 글 삭제를 자동으로 인식하는 것 같지 않다. | Jekyll은 Hugo보다 느리다(실시간 업데이트시). | . 1. Jupyter Notebook과 Markdown 변환은 알아서 해준다.↩ . 2. 다른 서비스에 종속(단 github 제외)되는 것을 피할 수 있다.↩ .",
-            "url": "https://byung.org/blogging/personal/2021/05/31/starting_my_blog.html",
-            "relUrl": "/blogging/personal/2021/05/31/starting_my_blog.html",
+            "url": "https://byung.org/blogging/%EA%B0%9C%EC%9D%B8%EC%82%AC/2021/05/31/starting_my_blog.html",
+            "relUrl": "/blogging/%EA%B0%9C%EC%9D%B8%EC%82%AC/2021/05/31/starting_my_blog.html",
             "date": " • May 31, 2021"
         }
         
