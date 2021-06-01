@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Terrain | byung.org</title>
+    <link>/en/tags/terrain/</link>
+      <atom:link href="/en/tags/terrain/index.xml" rel="self" type="application/rss+xml" />
+    <description>Terrain</description>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© 2019-2021 Byung Il Choi</copyright><lastBuildDate>Sun, 01 Dec 2019 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>/en/img/icon-192.png</url>
+      <title>Terrain</title>
+      <link>/en/tags/terrain/</link>
+    </image>
+    
+    <item>
+      <title>Progressive Growing GAN for Terrain Generation</title>
+      <link>/en/publication/proganterrain/</link>
+      <pubDate>Sun, 01 Dec 2019 00:00:00 +0000</pubDate>
+      <guid>/en/publication/proganterrain/</guid>
+      <description>&lt;!-- raw HTML omitted --&gt;
+&lt;p&gt;Currently In Progress&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Terrain Generation with GAN</title>
+      <link>/en/project/terrain-gan/</link>
+      <pubDate>Sun, 17 Nov 2019 00:00:00 +0000</pubDate>
+      <guid>/en/project/terrain-gan/</guid>
+      <description>&lt;h2 id=&#34;introduction&#34;&gt;Introduction&lt;/h2&gt;
+&lt;p&gt;As terrain generation would require a resolution that is higher than 100, DCGAN may not be a good fit for the purpose. This project has adapted Progressive Growing GAN for stable training and generations in a higher resolution. For more detail, there&#39;s a technical &lt;a href=&#34;TerrainGenerationUsingPGAN.pdf&#34;&gt;draft&lt;/a&gt; available.&lt;/p&gt;
+&lt;h2 id=&#34;progressive-growing-gan&#34;&gt;Progressive Growing GAN&lt;/h2&gt;
+&lt;p&gt;Progressive Growing GAN uses He initialization, pixelwise normalization, minibatch standard deviation, equalized learning rate for convolutions, exponential running average, and blending layers with different resolutions. This fading technique helps the network to get stablized. The &lt;a href=&#34;/en/post/mnist-progan/&#34;&gt;MNIST&lt;/a&gt; dataset was used in early stage to make sure that the network works well as shown in Misc section.&lt;/p&gt;
+&lt;h2 id=&#34;training&#34;&gt;Training&lt;/h2&gt;
+&lt;p&gt;The neural network was trained on the topology data and surface color from NASA&#39;s &lt;a href=&#34;https://visibleearth.nasa.gov&#34;&gt;Visible Earth&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;The training process combines the colors of the earth&#39;s surface and it&#39;s topology, which enables the network to generate both colors and heights of a terrain like below:&lt;/p&gt;
+&lt;p&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure&gt;
+
+
+  &lt;a data-fancybox=&#34;&#34; href=&#34;featured.jpg&#34; data-caption=&#34;generated terrain colors&#34;&gt;
+&lt;img src=&#34;featured.jpg&#34; alt=&#34;&#34; &gt;&lt;/a&gt;
+
+
+  
+  
+  &lt;figcaption&gt;
+    generated terrain colors
+  &lt;/figcaption&gt;
+
+
+&lt;/figure&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure&gt;
+
+
+  &lt;a data-fancybox=&#34;&#34; href=&#34;topo_example.jpg&#34; data-caption=&#34;generated heights&#34;&gt;
+&lt;img src=&#34;topo_example.jpg&#34; alt=&#34;&#34; &gt;&lt;/a&gt;
+
+
+  
+  
+  &lt;figcaption&gt;
+    generated heights
+  &lt;/figcaption&gt;
+
+
+&lt;/figure&gt;
+&lt;/p&gt;
+&lt;p&gt;These generated samples can be visualized in 3D.&lt;/p&gt;
+&lt;h3 id=&#34;31-terrain-visualization-in-3d&#34;&gt;3.1 Terrain Visualization in 3D&lt;/h3&gt;
+&lt;p&gt;The below video shows how the generated terrains can be visualized in 3D.&lt;/p&gt;
+
+&lt;div style=&#34;position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;&#34;&gt;
+  &lt;iframe src=&#34;https://www.youtube.com/embed/WM52rjuR6Pw&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;&#34; allowfullscreen title=&#34;YouTube Video&#34;&gt;&lt;/iframe&gt;
+&lt;/div&gt;
+
+&lt;p&gt;The generations from fixed random latent vectors were tracked, and their training progress in 3D representations were captured as below:&lt;/p&gt;
+&lt;h3 id=&#34;32-training-visualization-in-3d&#34;&gt;3.2 Training Visualization in 3D&lt;/h3&gt;
+&lt;p&gt;We can see how the GAN is combining various features in the visualization, which we cannot see in the 2D visualization.&lt;/p&gt;
+
+&lt;div style=&#34;position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;&#34;&gt;
+  &lt;iframe src=&#34;https://www.youtube.com/embed/rCjdObI5iFU&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;&#34; allowfullscreen title=&#34;YouTube Video&#34;&gt;&lt;/iframe&gt;
+&lt;/div&gt;
+
+&lt;h3 id=&#34;32-training-visualization-in-2d&#34;&gt;3.2 Training Visualization in 2D&lt;/h3&gt;
+&lt;p&gt;The left half is how surface colors are generated and the right half shows the corresponding heights.&lt;/p&gt;
+
+&lt;div style=&#34;position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;&#34;&gt;
+  &lt;iframe src=&#34;https://www.youtube.com/embed/0B4VAgV4Eyc&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;&#34; allowfullscreen title=&#34;YouTube Video&#34;&gt;&lt;/iframe&gt;
+&lt;/div&gt;
+
+&lt;h2 id=&#34;acknowledgement&#34;&gt;Acknowledgement&lt;/h2&gt;
+&lt;p&gt;This research project was advised by Prof. &lt;a href=&#34;https://cs.illinois.edu/directory/profile/shaffer1&#34;&gt;Eric Shaffer&lt;/a&gt;.&lt;/p&gt;
+&lt;h2 id=&#34;misc&#34;&gt;Misc.&lt;/h2&gt;
+&lt;p&gt;MNIST digits generation using Progressive Growing GAN&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Q Learning | byung.org</title>
+    <link>/en/tags/q-learning/</link>
+      <atom:link href="/en/tags/q-learning/index.xml" rel="self" type="application/rss+xml" />
+    <description>Q Learning</description>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© 2019-2021 Byung Il Choi</copyright><lastBuildDate>Tue, 01 Jan 2019 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>/en/img/icon-192.png</url>
+      <title>Q Learning</title>
+      <link>/en/tags/q-learning/</link>
+    </image>
+    
+    <item>
+      <title>Deep Q-Learning for Atari Games</title>
+      <link>/en/project/dql-atari/</link>
+      <pubDate>Tue, 01 Jan 2019 00:00:00 +0000</pubDate>
+      <guid>/en/project/dql-atari/</guid>
+      <description>&lt;h2 id=&#34;introduction&#34;&gt;Introduction&lt;/h2&gt;
+&lt;p&gt;The reinforcement learning has been around for more than a decade [2] , and Q-learning is one of most famous method for RL. DeepMind has especially utilized Q-learning, and evolved the idea to the next level by adapting non-linear model. Instead of Q table, Neural network is now used to predict the values, which is called Deep Q Network. The CNN and Deep Q-learning is what DeepMind’s work is all about.&lt;/p&gt;
+&lt;h2 id=&#34;problem&#34;&gt;Problem&lt;/h2&gt;
+&lt;p&gt;DQN has to observe a game from ATARI and be trained to beat human level performance. Since Space Invader was the main example of early Deep-Mind’s paper, we are going to chose the game for this project. We are going to train our model to achieve the score of 500, which is the result of &amp;ldquo;Playing atari with deep reinforcement learn-
+ing.&amp;quot;, the first DeepMind’s paper. And Space Invader is a game that human level performance is hard to achieve in the early works of DQN.&lt;/p&gt;
+&lt;h2 id=&#34;related-work&#34;&gt;Related Work&lt;/h2&gt;
+&lt;p&gt;DeepMind’s two early papers has two versions; we chose the version that uses three convolutional layers and one FC layer with 512 hidden units. This particular model for Space Invader has 6 outputs. All of the layers are followed by ReLU except the last output layer.&lt;/p&gt;
+&lt;h2 id=&#34;target-network&#34;&gt;Target Network&lt;/h2&gt;
+&lt;p&gt;Because of the shifting weights of Q model, DeepMind has suggested to use two Q networks. This is related to divergence of Reinforcement Learning. The first network consistently updates as normal DNN would, but the second network, called the target network, doesn’t have sequential updates but is used to estimate the value of next state. Because of this it’s updated every 10,000 frames, but this can be changed through hyperparameter settings. According to the Deep-Mind’s paper, target network prevents of falling into a bad local minima and shifting weights. Thus, the target network has different set of parameters θ.&lt;/p&gt;
+&lt;h2 id=&#34;experience-replay&#34;&gt;Experience Replay&lt;/h2&gt;
+&lt;p&gt;Our problem includes correlations of sequences of input which consists of actions and states. In order to break
+this, DeepMind suggests to use Experience Replay. Experience Replay is another word for big sampling pool. The
+continuous sequences of data can be recorded to become a large pool, which can be used for sampling later. As we get more and more data, having correlation between sampled batch is more unlikely. Thereby, sampled batchs can be treated as if they are independent themselves.&lt;/p&gt;
+&lt;h2 id=&#34;dql-agent-playing-space-invaders&#34;&gt;DQL Agent playing Space Invaders&lt;/h2&gt;
+
+&lt;div style=&#34;position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;&#34;&gt;
+  &lt;iframe src=&#34;https://www.youtube.com/embed/OiTcfCf7Z-E&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;&#34; allowfullscreen title=&#34;YouTube Video&#34;&gt;&lt;/iframe&gt;
+&lt;/div&gt;
+
+&lt;h2 id=&#34;acknowledgement&#34;&gt;Acknowledgement&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;This project was advised by Prof. &lt;a href=&#34;https://jasirign.github.io&#34;&gt;Justin Sirignano&lt;/a&gt;.&lt;/li&gt;
+&lt;li&gt;This project was tested and reviewed by Seongsu Ha&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Q-Learning Agent in VR</title>
+      <link>/en/project/q-learning-vr/</link>
+      <pubDate>Thu, 27 Dec 2018 00:00:00 +0000</pubDate>
+      <guid>/en/project/q-learning-vr/</guid>
+      <description>&lt;h2 id=&#34;1-introduction&#34;&gt;1. Introduction&lt;/h2&gt;
+&lt;p&gt;An AI agent is often not tangible. It’s an artificially being that usually resides in virtual space. We can seldom see robots and drones with AI on media, but not usually in the physical world. It’s very hard to bring agents to the physical world, but if we let them stay in their space, it becomes a lot easier to interact. The VR technologies let us be in a virtual space, thus we can experience the embodiment of an AI agent. This project is motivated by this gateway to space of another being.&lt;/p&gt;
+&lt;h2 id=&#34;2-problem&#34;&gt;2. Problem&lt;/h2&gt;
+&lt;p&gt;It’s very costly to bring AI to physical space, and it would cost a tremendous amount to develop and test such agent in physical space. But, if we are able to simulate good enough for AI agents, we believe that the cost of development can be reduced drastically. And, we believe the AI agent in VR can be very entertaining.&lt;/p&gt;
+&lt;h2 id=&#34;3-practices&#34;&gt;3. Practices&lt;/h2&gt;
+&lt;p&gt;For comfortable experience, OBP suggests few things. And, these are the main guideline that we will follow:&lt;br&gt;
+(i) distance to focusing object is between 0.75 and 3.5 meters [OBP 10],&lt;br&gt;
+(ii) post-processing effects are applied to both eyes [OBP 10],&lt;br&gt;
+(iii) use default FOV [OBP 13],&lt;br&gt;
+(iv) Viewing the environment from a stationary position is most comfortable. [OBP 6] Users will mostly be standing in a training-stage, and evaluation stage in a game form would also mostly be in a stationary position.&lt;/p&gt;
+&lt;h2 id=&#34;4-rules-for-agents&#34;&gt;4. Rules for Agents&lt;/h2&gt;
+&lt;p&gt;All types of agents have 30 decisions/sec and moves in same speed except human players.
+When the ball bounces, its reflection angle and speed randomly change, so that its harder for the AI agents. Without continuous random adjustments, Q-Agents can play the game for very long time. It&#39;s designed to test their limits.&lt;/p&gt;
+&lt;h3 id=&#34;5-1-q-learning-agents-playing-each-other&#34;&gt;5-1 Q-Learning Agents Playing each other&lt;/h3&gt;
+
+&lt;div style=&#34;position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;&#34;&gt;
+  &lt;iframe src=&#34;https://www.youtube.com/embed/3fCz_Gp1MB4&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;&#34; allowfullscreen title=&#34;YouTube Video&#34;&gt;&lt;/iframe&gt;
+&lt;/div&gt;
+
+&lt;p&gt;Most of the mistakes are by movements that are off by an inch. The high ball speed can reduce the game time effectively.&lt;/p&gt;
+&lt;h3 id=&#34;5-2-q-agent-vs-greedy-agent&#34;&gt;5-2 Q-Agent vs Greedy Agent&lt;/h3&gt;
+
+&lt;div style=&#34;position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;&#34;&gt;
+  &lt;iframe src=&#34;https://www.youtube.com/embed/-JLkZ-1K8n4&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;&#34; allowfullscreen title=&#34;YouTube Video&#34;&gt;&lt;/iframe&gt;
+&lt;/div&gt;
+
+&lt;p&gt;A greedy agent can never beat a Q-Learning agent, even though they have same decision making rates and moving speed.&lt;/p&gt;
+&lt;h2 id=&#34;acknowledgement&#34;&gt;Acknowledgement&lt;/h2&gt;
+&lt;p&gt;This project was advised by Prof. &lt;a href=&#34;https://cs.illinois.edu/directory/profile/shaffer1&#34;&gt;Eric Shaffer&lt;/a&gt;.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;AI, Physics, and Graphics Programming by Byung Il Choi&lt;/li&gt;
+&lt;li&gt;Graphics Programming and Game Play by Seongsu Ha&lt;/li&gt;
+&lt;li&gt;User Interface and Graphic Design by Chris Wegenek&lt;/li&gt;
+&lt;li&gt;Sound and Testing by Alejandro Marin&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

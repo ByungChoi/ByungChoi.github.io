@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Tags | byung.org</title>
+    <link>/en/tags/</link>
+      <atom:link href="/en/tags/index.xml" rel="self" type="application/rss+xml" />
+    <description>Tags</description>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© 2019-2021 Byung Il Choi</copyright><lastBuildDate>Tue, 15 Sep 2020 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>/en/img/icon-192.png</url>
+      <title>Tags</title>
+      <link>/en/tags/</link>
+    </image>
+    
+    <item>
+      <title>AI</title>
+      <link>/en/tags/ai/</link>
+      <pubDate>Tue, 15 Sep 2020 00:00:00 +0000</pubDate>
+      <guid>/en/tags/ai/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Football</title>
+      <link>/en/tags/football/</link>
+      <pubDate>Tue, 15 Sep 2020 00:00:00 +0000</pubDate>
+      <guid>/en/tags/football/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Reinforcement Learning</title>
+      <link>/en/tags/reinforcement-learning/</link>
+      <pubDate>Tue, 15 Sep 2020 00:00:00 +0000</pubDate>
+      <guid>/en/tags/reinforcement-learning/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Deep Learning</title>
+      <link>/en/tags/deep-learning/</link>
+      <pubDate>Sun, 01 Dec 2019 00:00:00 +0000</pubDate>
+      <guid>/en/tags/deep-learning/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>GAN</title>
+      <link>/en/tags/gan/</link>
+      <pubDate>Sun, 01 Dec 2019 00:00:00 +0000</pubDate>
+      <guid>/en/tags/gan/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>OpenGL</title>
+      <link>/en/tags/opengl/</link>
+      <pubDate>Sun, 01 Dec 2019 00:00:00 +0000</pubDate>
+      <guid>/en/tags/opengl/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>ProGAN</title>
+      <link>/en/tags/progan/</link>
+      <pubDate>Sun, 01 Dec 2019 00:00:00 +0000</pubDate>
+      <guid>/en/tags/progan/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Terrain</title>
+      <link>/en/tags/terrain/</link>
+      <pubDate>Sun, 01 Dec 2019 00:00:00 +0000</pubDate>
+      <guid>/en/tags/terrain/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>WGAN-GP</title>
+      <link>/en/tags/wgan-gp/</link>
+      <pubDate>Sun, 01 Dec 2019 00:00:00 +0000</pubDate>
+      <guid>/en/tags/wgan-gp/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>MNIST</title>
+      <link>/en/tags/mnist/</link>
+      <pubDate>Fri, 08 Nov 2019 00:00:00 +0000</pubDate>
+      <guid>/en/tags/mnist/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>GQE</title>
+      <link>/en/tags/gqe/</link>
+      <pubDate>Sun, 07 Apr 2019 00:00:00 +0000</pubDate>
+      <guid>/en/tags/gqe/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Information Retrieval</title>
+      <link>/en/tags/information-retrieval/</link>
+      <pubDate>Sun, 07 Apr 2019 00:00:00 +0000</pubDate>
+      <guid>/en/tags/information-retrieval/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Query Expansion</title>
+      <link>/en/tags/query-expansion/</link>
+      <pubDate>Sun, 07 Apr 2019 00:00:00 +0000</pubDate>
+      <guid>/en/tags/query-expansion/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>DQL</title>
+      <link>/en/tags/dql/</link>
+      <pubDate>Tue, 01 Jan 2019 00:00:00 +0000</pubDate>
+      <guid>/en/tags/dql/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Q Learning</title>
+      <link>/en/tags/q-learning/</link>
+      <pubDate>Tue, 01 Jan 2019 00:00:00 +0000</pubDate>
+      <guid>/en/tags/q-learning/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Unity</title>
+      <link>/en/tags/unity/</link>
+      <pubDate>Thu, 27 Dec 2018 00:00:00 +0000</pubDate>
+      <guid>/en/tags/unity/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>BM25</title>
+      <link>/en/tags/bm25/</link>
+      <pubDate>Wed, 15 Nov 2017 00:00:00 +0000</pubDate>
+      <guid>/en/tags/bm25/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Cuda</title>
+      <link>/en/tags/cuda/</link>
+      <pubDate>Mon, 27 Apr 2015 00:00:00 +0000</pubDate>
+      <guid>/en/tags/cuda/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Fractal</title>
+      <link>/en/tags/fractal/</link>
+      <pubDate>Mon, 27 Apr 2015 00:00:00 +0000</pubDate>
+      <guid>/en/tags/fractal/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Graphics</title>
+      <link>/en/tags/graphics/</link>
+      <pubDate>Mon, 27 Apr 2015 00:00:00 +0000</pubDate>
+      <guid>/en/tags/graphics/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Mandelbrot</title>
+      <link>/en/tags/mandelbrot/</link>
+      <pubDate>Mon, 27 Apr 2015 00:00:00 +0000</pubDate>
+      <guid>/en/tags/mandelbrot/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Visualization</title>
+      <link>/en/tags/visualization/</link>
+      <pubDate>Mon, 27 Apr 2015 00:00:00 +0000</pubDate>
+      <guid>/en/tags/visualization/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>project</title>
+      <link>/en/tags/project/</link>
+      <pubDate>Wed, 27 Jan 2010 00:00:00 +0000</pubDate>
+      <guid>/en/tags/project/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

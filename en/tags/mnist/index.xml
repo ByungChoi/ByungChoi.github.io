@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>MNIST | byung.org</title>
+    <link>/en/tags/mnist/</link>
+      <atom:link href="/en/tags/mnist/index.xml" rel="self" type="application/rss+xml" />
+    <description>MNIST</description>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© 2019-2021 Byung Il Choi</copyright><lastBuildDate>Fri, 08 Nov 2019 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>/en/img/icon-192.png</url>
+      <title>MNIST</title>
+      <link>/en/tags/mnist/</link>
+    </image>
+    
+    <item>
+      <title>ProGAN on Generating Digits from MNIST</title>
+      <link>/en/post/mnist-progan/</link>
+      <pubDate>Fri, 08 Nov 2019 00:00:00 +0000</pubDate>
+      <guid>/en/post/mnist-progan/</guid>
+      <description>&lt;p&gt;While building and testing a progressive growing GAN, I was able to train the network with the MNIST dataset. The results looks good and the training visualization shows how Progressive Growing GAN uses multiple layers to increase the resolution as below:&lt;/p&gt;
+
+&lt;div style=&#34;position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;&#34;&gt;
+  &lt;iframe src=&#34;https://www.youtube.com/embed/MlkW60qwY_Y&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;&#34; allowfullscreen title=&#34;YouTube Video&#34;&gt;&lt;/iframe&gt;
+&lt;/div&gt;
+
+&lt;h2 id=&#34;acknowledgement&#34;&gt;Acknowledgement&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;MNIST Dataset is from &lt;a href=&#34;http://yann.lecun.com/exdb/mnist/&#34;&gt;http://yann.lecun.com/exdb/mnist/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Progressive Growing GAN is implemented using &lt;a href=&#34;http://yann.lecun.com/exdb/mnist/&#34;&gt;PyTorch&lt;/a&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

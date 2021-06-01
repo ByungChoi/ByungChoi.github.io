@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Authors | byung.org</title>
+    <link>/en/authors/</link>
+      <atom:link href="/en/authors/index.xml" rel="self" type="application/rss+xml" />
+    <description>Authors</description>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© 2019-2021 Byung Il Choi</copyright><lastBuildDate>Sun, 01 Dec 2019 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>/en/img/icon-192.png</url>
+      <title>Authors</title>
+      <link>/en/authors/</link>
+    </image>
+    
+    <item>
+      <title></title>
+      <link>/en/authors/admin/</link>
+      <pubDate>Sun, 01 Dec 2019 00:00:00 +0000</pubDate>
+      <guid>/en/authors/admin/</guid>
+      <description>&lt;p&gt;Byung Il Choi is working on a football simulation software at Tict.ai. His work simulates football, soccer in US, matches which incorporates AI agents.&lt;/p&gt;
+&lt;p&gt;He studied Computer Science at the University of Illinois at Urbana-Champaign. He&#39;s interested in reinforcement learning and the machine augmented intelligence which is related to information technology and AI.&lt;/p&gt;
+&lt;p&gt;His undergraduate researches were advised by Prof. Cheng Xiang Zhai for Information Retrieval, and advised by Prof. Eric Shaffer for VR, AI, and Computer Graphics projects.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Eric Shaffer (Advisor)</title>
+      <link>/en/authors/eric-shaffer-advisor/</link>
+      <pubDate>Sun, 01 Dec 2019 00:00:00 +0000</pubDate>
+      <guid>/en/authors/eric-shaffer-advisor/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Cheng Xiang Zhai (Advisor)</title>
+      <link>/en/authors/cheng-xiang-zhai-advisor/</link>
+      <pubDate>Sun, 07 Apr 2019 00:00:00 +0000</pubDate>
+      <guid>/en/authors/cheng-xiang-zhai-advisor/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

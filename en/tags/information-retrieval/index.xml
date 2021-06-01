@@ -1,0 +1,278 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Information Retrieval | byung.org</title>
+    <link>/en/tags/information-retrieval/</link>
+      <atom:link href="/en/tags/information-retrieval/index.xml" rel="self" type="application/rss+xml" />
+    <description>Information Retrieval</description>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© 2019-2021 Byung Il Choi</copyright><lastBuildDate>Sun, 07 Apr 2019 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>/en/img/icon-192.png</url>
+      <title>Information Retrieval</title>
+      <link>/en/tags/information-retrieval/</link>
+    </image>
+    
+    <item>
+      <title>Generative Query Expansion, Stochastic Approach with Quantitative Analysis</title>
+      <link>/en/publication/gqe_timan/</link>
+      <pubDate>Sun, 07 Apr 2019 00:00:00 +0000</pubDate>
+      <guid>/en/publication/gqe_timan/</guid>
+      <description>&lt;!-- raw HTML omitted --&gt;
+&lt;p&gt;Currently In Progress&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Generative Query Expansion</title>
+      <link>/en/project/gqe-timan/</link>
+      <pubDate>Wed, 15 Nov 2017 00:00:00 +0000</pubDate>
+      <guid>/en/project/gqe-timan/</guid>
+      <description>&lt;h2 id=&#34;introduction&#34;&gt;Introduction&lt;/h2&gt;
+&lt;p&gt;In many query expansion studies, the primary evaluation depends on its search result. This project tries to provide a second way&lt;sup id=&#34;fnref:1&#34;&gt;&lt;a href=&#34;#fn:1&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;1&lt;/a&gt;&lt;/sup&gt; of measuring QE performance by measuring how many query expansion terms overlaps with ideal expansion terms, where ideal expansion terms are trained from a high performing QE from supervised learning. After expansion, we used Okapi BM25 for ranking(searching).&lt;/p&gt;
+&lt;h2 id=&#34;approaches&#34;&gt;Approaches&lt;/h2&gt;
+&lt;p&gt;(i) Try to find expansion cadidates using GQE model which tries find the terms that maximizes the probability of coocurrening terms.&lt;br&gt;
+(ii) Try to see if maximizing probabilities of coocurring terms is the right way&lt;br&gt;
+(iii) Try to find cohesiveness of coocurring terms&lt;/p&gt;
+&lt;h2 id=&#34;finding-ideal-expansion-terms&#34;&gt;Finding Ideal Expansion Terms&lt;/h2&gt;
+&lt;p&gt;We need to find ideal expansion terms first, so we have a criterion for comparing model&#39;s ouput. A supervised learning can find expansion terms that performs search well as it gives a result with high P@10 and MAP.
+The ideal expansion from training on AP88/89 performs as following:&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Expansion&lt;/th&gt;
+&lt;th&gt;p@5&lt;/th&gt;
+&lt;th&gt;p@10&lt;/th&gt;
+&lt;th&gt;MAP@10&lt;/th&gt;
+&lt;th&gt;MAP@100&lt;/th&gt;
+&lt;th&gt;MAP@1k&lt;/th&gt;
+&lt;th&gt;Recall@1k&lt;/th&gt;
+&lt;th&gt;Recall@10k&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;+0 terms&lt;/td&gt;
+&lt;td&gt;0.41&lt;/td&gt;
+&lt;td&gt;0.371&lt;/td&gt;
+&lt;td&gt;0.28&lt;/td&gt;
+&lt;td&gt;&amp;lt; 0.25&lt;/td&gt;
+&lt;td&gt;&amp;lt; 0.25&lt;/td&gt;
+&lt;td&gt;0.662&lt;/td&gt;
+&lt;td&gt;0.861&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;+400&lt;/td&gt;
+&lt;td&gt;0.906&lt;/td&gt;
+&lt;td&gt;0.827&lt;/td&gt;
+&lt;td&gt;0.817&lt;/td&gt;
+&lt;td&gt;0.556&lt;/td&gt;
+&lt;td&gt;0.546&lt;/td&gt;
+&lt;td&gt;0.8578&lt;/td&gt;
+&lt;td&gt;0.9642&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;+2000&lt;/td&gt;
+&lt;td&gt;0.98&lt;/td&gt;
+&lt;td&gt;0.959&lt;/td&gt;
+&lt;td&gt;0.9832&lt;/td&gt;
+&lt;td&gt;0.8734&lt;/td&gt;
+&lt;td&gt;0.7935&lt;/td&gt;
+&lt;td&gt;0.8825&lt;/td&gt;
+&lt;td&gt;0.9495&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;In early work, the goal was to find 400-expansion terms. Later, we found that 400 was not the upper bound but 2000+ terms could be used for expansion.&lt;/p&gt;
+&lt;h2 id=&#34;early-work&#34;&gt;Early Work&lt;/h2&gt;
+&lt;p&gt;The first approach assumes that 400 expansion terms are enough quantity for QE. The top-100 terms that maxmizes the probability of coocurrence decides high amount of MAP. So, finding these top-100 terms are important as top-100 contributes most to the maximization. GQE finds top 100 as below:&lt;/p&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure&gt;
+
+
+  &lt;a data-fancybox=&#34;&#34; href=&#34;result_early.jpg&#34; data-caption=&#34;generated terrain colors&#34;&gt;
+&lt;img src=&#34;result_early.jpg&#34; alt=&#34;&#34; &gt;&lt;/a&gt;
+
+
+  
+  
+  &lt;figcaption&gt;
+    generated terrain colors
+  &lt;/figcaption&gt;
+
+
+&lt;/figure&gt;
+
+&lt;p&gt;The above graph is in query level measurment which shows how many exansion terms could be found that are in top-100 ideal expansion terms.&lt;/p&gt;
+&lt;p&gt;The larger model finds more ideal expansion terms, but so is the false positive expansion candidates.&lt;/p&gt;
+&lt;h2 id=&#34;quality-vs-quantity&#34;&gt;Quality vs Quantity&lt;/h2&gt;
+&lt;p&gt;The early work tries find terms that maximizes the probability of coocurrence, and it focused on top 100 terms. During the process, we found that the number of expandable terms can be more than 1000 and it gives a much better result as we see below:&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Expansion&lt;/th&gt;
+&lt;th&gt;p@5&lt;/th&gt;
+&lt;th&gt;p@10&lt;/th&gt;
+&lt;th&gt;MAP@10&lt;/th&gt;
+&lt;th&gt;MAP@100&lt;/th&gt;
+&lt;th&gt;MAP@1k&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;+400&lt;/td&gt;
+&lt;td&gt;0.906&lt;/td&gt;
+&lt;td&gt;0.827&lt;/td&gt;
+&lt;td&gt;0.817&lt;/td&gt;
+&lt;td&gt;0.556&lt;/td&gt;
+&lt;td&gt;0.546&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;+2000&lt;/td&gt;
+&lt;td&gt;0.98&lt;/td&gt;
+&lt;td&gt;0.959&lt;/td&gt;
+&lt;td&gt;0.9832&lt;/td&gt;
+&lt;td&gt;0.8734&lt;/td&gt;
+&lt;td&gt;0.7935&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;Let&#39;s use Monte Carlo method to make sure that the quantity matters more than quality; we randomly pick n terms from the ideal expansion term pool that we got from supervised learning, and see how it performs below:&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;&lt;/th&gt;
+&lt;th&gt;Max Cooc 400&lt;/th&gt;
+&lt;th&gt;&lt;/th&gt;
+&lt;th&gt;Monte Carlo @400&lt;/th&gt;
+&lt;th&gt;Monte Carlo @500&lt;/th&gt;
+&lt;th&gt;Monte Carlo @600&lt;/th&gt;
+&lt;th&gt;Monte Carlo @700&lt;/th&gt;
+&lt;th&gt;Monte Carlo @800&lt;/th&gt;
+&lt;th&gt;Monte Carlo @900&lt;/th&gt;
+&lt;th&gt;Monte Carlo @1000&lt;/th&gt;
+&lt;th&gt;&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;MAP@100:&lt;/td&gt;
+&lt;td&gt;0.556&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;0.568&lt;/td&gt;
+&lt;td&gt;0.614&lt;/td&gt;
+&lt;td&gt;0.653&lt;/td&gt;
+&lt;td&gt;0.682&lt;/td&gt;
+&lt;td&gt;0.704&lt;/td&gt;
+&lt;td&gt;0.725&lt;/td&gt;
+&lt;td&gt;0.742&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;Max Cooc is using 400 expansion terms which come from maximized term co-occurence probability; this is no better than QE with 400 randomly picked expansion terms from ideal expansion pool as shown in Monte Carlo@400 method. As random picks are better than the co-occurence proability maximization method, it&#39;s better to focus on finding terms quantitatively.&lt;/p&gt;
+&lt;h2 id=&#34;recent-work&#34;&gt;Recent Work&lt;/h2&gt;
+&lt;p&gt;The idea of finding top 100 ideal expansion is not the right direction as we found that 400 ideal expansion terms were at its local maxima for its performance. The quantity of expansion term mattered more than the quality, where the quality is high when the ideal expansion terms maximizes the co-occurrence probability of the expansion terms.&lt;/p&gt;
+&lt;p&gt;GQE seems to capture a lot of ideal expansion terms:&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;GQE first n-terms&lt;/th&gt;
+&lt;th&gt;0-50&lt;/th&gt;
+&lt;th&gt;0-100&lt;/th&gt;
+&lt;th&gt;0-200&lt;/th&gt;
+&lt;th&gt;0-300&lt;/th&gt;
+&lt;th&gt;0-400&lt;/th&gt;
+&lt;th&gt;0-Max&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;Avg ideal terms found&lt;/td&gt;
+&lt;td&gt;41&lt;/td&gt;
+&lt;td&gt;82&lt;/td&gt;
+&lt;td&gt;161&lt;/td&gt;
+&lt;td&gt;236&lt;/td&gt;
+&lt;td&gt;304&lt;/td&gt;
+&lt;td&gt;1156&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Precision&lt;/td&gt;
+&lt;td&gt;0.82&lt;/td&gt;
+&lt;td&gt;0.82&lt;/td&gt;
+&lt;td&gt;0.805&lt;/td&gt;
+&lt;td&gt;07867&lt;/td&gt;
+&lt;td&gt;0.76&lt;/td&gt;
+&lt;td&gt;n/a&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;The precision of finding these ideal expansion terms with GQE is quite high, but its error is not low enough yet. But, with appropriate terms injected, GQE&#39;s extension can be useful. In the first feedback loop, we get enough positive terms that can lower the error rates of GQE. With one feedback and GQE expansion, the search results improves as below:&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;&lt;/th&gt;
+&lt;th&gt;No GQE&lt;/th&gt;
+&lt;th&gt;GQE+50&lt;/th&gt;
+&lt;th&gt;GQE+100&lt;/th&gt;
+&lt;th&gt;GQE+150&lt;/th&gt;
+&lt;th&gt;GQE+200&lt;/th&gt;
+&lt;th&gt;GQE+250&lt;/th&gt;
+&lt;th&gt;GQE+300&lt;/th&gt;
+&lt;th&gt;GQE+350&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;p@5&lt;/td&gt;
+&lt;td&gt;0.41&lt;/td&gt;
+&lt;td&gt;0.496&lt;/td&gt;
+&lt;td&gt;0.506&lt;/td&gt;
+&lt;td&gt;0.516&lt;/td&gt;
+&lt;td&gt;0.522&lt;/td&gt;
+&lt;td&gt;0.526&lt;/td&gt;
+&lt;td&gt;&lt;strong&gt;0.534&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;0.514&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;p@10&lt;/td&gt;
+&lt;td&gt;0.371&lt;/td&gt;
+&lt;td&gt;0.391&lt;/td&gt;
+&lt;td&gt;0.404&lt;/td&gt;
+&lt;td&gt;0.411&lt;/td&gt;
+&lt;td&gt;0.417&lt;/td&gt;
+&lt;td&gt;&lt;strong&gt;0.428&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;0.42&lt;/td&gt;
+&lt;td&gt;0.415&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;GQE+n is for queries expanded with n-GQE terms and 1 feedback. The injection of true positive terms from a feedback helps to reduce GQE&#39;s error rate, and improves the search performance.&lt;/p&gt;
+&lt;h2 id=&#34;conclusion&#34;&gt;Conclusion&lt;/h2&gt;
+&lt;p&gt;So far, we&#39;ve found that GQE captures a great portion of ideal expansion terms and is useful when it&#39;s used with the first feedback. If we find a way to increase the precision of finding GQE candidates(ie. filter out false positive terms), then the query expansion will improve even more as GQE&#39;s candidate terms are becoming closer to ideal expansion terms.&lt;/p&gt;
+&lt;h2 id=&#34;acknowledgement&#34;&gt;Acknowledgement&lt;/h2&gt;
+&lt;p&gt;This project is advised by Prof. &lt;a href=&#34;http://czhai.cs.illinois.edu&#34;&gt;Cheng Xiang Zhai&lt;/a&gt;&lt;/p&gt;
+&lt;section class=&#34;footnotes&#34; role=&#34;doc-endnotes&#34;&gt;
+&lt;hr&gt;
+&lt;ol&gt;
+&lt;li id=&#34;fn:1&#34; role=&#34;doc-endnote&#34;&gt;
+&lt;p&gt;This project is currently under progress. &lt;a href=&#34;#fnref:1&#34; class=&#34;footnote-backref&#34; role=&#34;doc-backlink&#34;&gt;&amp;#x21a9;&amp;#xfe0e;&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/section&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>
